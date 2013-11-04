@@ -1,0 +1,68 @@
+/*
+
+   Drop this in your css file to get insight into how elements are rendering.
+   Useful for debugging layout issues. Outline is used instead of border as
+   it doesn't add width to the elements (thus changing the layout).
+
+   Helpul tips: Often times people forget that inline-block elements render
+   the white-space between elements (this is also how inline elements render).
+
+
+*/
+
+a {           outline: 1px solid  crimson;}
+abbr {        outline: 1px solid  aqua;}
+address {     outline: 1px solid  aquamarine;}
+article {     outline: 1px solid  blueviolet;}
+blockquote {  outline: 1px solid  cadetblue;}
+caption {     outline: 1px solid  cornflowerblue;}
+code {        outline: 1px solid  coral;}
+div {         outline: 1px solid  orchid;}
+dl {          outline: 1px solid  darkcyan;}
+fieldset {    outline: 1px solid  darkmagenta;}
+figcaption {  outline: 1px solid  darkorange;}
+figure {      outline: 1px solid  deeppink;}
+footer {      outline: 1px solid  gold;}
+form {        outline: 1px solid  goldenrod;}
+h1 {          outline: 1px solid  greenyellow;}
+h2 {          outline: 1px solid  lavender;}
+h3 {          outline: 1px solid  lightblue;}
+h4 {          outline: 1px solid  lightcoral;}
+h5 {          outline: 1px solid  lightcyan;}
+h6 {          outline: 1px solid  lightgreen;}
+header {      outline: 1px solid  lightsalmon;}
+hr {          outline: 1px solid  lightseagreen;}
+img {         outline: 1px solid  lightskyblue;}
+input {       outline: 1px solid  mediumaquamarine;}
+label {       outline: 1px solid  mediumorchid;}
+legend {      outline: 1px solid  orangered;}
+li {          outline: 1px solid  palevioletred;}
+nav {         outline: 1px solid  plum;}
+ol {          outline: 1px solid  purple;}
+option {      outline: 1px solid  royalblue;}
+p {           outline: 1px solid  tomato;}
+pre {         outline: 1px solid  turquoise;}
+progress {    outline: 1px solid  violet;}
+s {           outline: 1px solid  yellow;}
+samp {        outline: 1px solid  sandybrown;}
+sbd {         outline: 1px solid  brown;}
+section {     outline: 1px solid  powderblue;}
+select {      outline: 1px solid  palegreen;}
+code {        outline: 1px solid  navy;}
+small {       outline: 1px solid  mediumpurple;}
+span {        outline: 1px solid  mediumslateblue;}
+sub {         outline: 1px solid  mintcream;}
+submit {      outline: 1px solid  mistyrose;}
+sup {         outline: 1px solid  moccasin;}
+table {       outline: 1px solid  black;}
+tbody {       outline: 1px solid  gray;}
+td {          outline: 1px solid  dodgerblue;}
+textarea {    outline: 1px solid  dimgray;}
+tfoot {       outline: 1px solid  deepskyblue;}
+th {          outline: 1px solid  green;}
+thead {       outline: 1px solid  lightsteelblue;}
+time {        outline: 1px solid  lightslategray;}
+tr {          outline: 1px solid  lime;}
+ul {          outline: 1px solid  limegreen;}
+var {         outline: 1px solid  firebrick;}
+
