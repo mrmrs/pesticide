@@ -6,7 +6,7 @@ Without 2000 clicks in chrome dev tools.
 ## WTF is this?
 
 Sometimes if I am trying to sleuth a layout problem in css, all I want
-is every single element on the page to show me where it's outline is.
+is every single element on the page to show me where its outline is.
 And I want all the outline colors to be different per element because,
 well sometimes I need to tell stuff apart. This has proved much faster
 for me than clicking around in chrome dev tools when sleuthing what css
