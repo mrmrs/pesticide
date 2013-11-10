@@ -10,59 +10,64 @@
 
 */
 
-a {           outline: 1px solid  crimson;}
-abbr {        outline: 1px solid  aqua;}
-address {     outline: 1px solid  aquamarine;}
-article {     outline: 1px solid  blueviolet;}
-blockquote {  outline: 1px solid  cadetblue;}
-caption {     outline: 1px solid  cornflowerblue;}
-code {        outline: 1px solid  coral;}
-div {         outline: 1px solid  orchid;}
-dl {          outline: 1px solid  darkcyan;}
-fieldset {    outline: 1px solid  darkmagenta;}
-figcaption {  outline: 1px solid  darkorange;}
-figure {      outline: 1px solid  deeppink;}
-footer {      outline: 1px solid  gold;}
-form {        outline: 1px solid  goldenrod;}
-h1 {          outline: 1px solid  greenyellow;}
-h2 {          outline: 1px solid  lavender;}
-h3 {          outline: 1px solid  lightblue;}
-h4 {          outline: 1px solid  lightcoral;}
-h5 {          outline: 1px solid  lightcyan;}
-h6 {          outline: 1px solid  lightgreen;}
-header {      outline: 1px solid  lightsalmon;}
-hr {          outline: 1px solid  lightseagreen;}
-img {         outline: 1px solid  lightskyblue;}
-input {       outline: 1px solid  mediumaquamarine;}
-label {       outline: 1px solid  mediumorchid;}
-legend {      outline: 1px solid  orangered;}
-li {          outline: 1px solid  palevioletred;}
-nav {         outline: 1px solid  plum;}
-ol {          outline: 1px solid  purple;}
-option {      outline: 1px solid  royalblue;}
-p {           outline: 1px solid  tomato;}
-pre {         outline: 1px solid  turquoise;}
-progress {    outline: 1px solid  violet;}
-s {           outline: 1px solid  yellow;}
-samp {        outline: 1px solid  sandybrown;}
-sbd {         outline: 1px solid  brown;}
-section {     outline: 1px solid  powderblue;}
-select {      outline: 1px solid  palegreen;}
-code {        outline: 1px solid  navy;}
-small {       outline: 1px solid  mediumpurple;}
-span {        outline: 1px solid  mediumslateblue;}
-sub {         outline: 1px solid  mintcream;}
-submit {      outline: 1px solid  mistyrose;}
-sup {         outline: 1px solid  moccasin;}
-table {       outline: 1px solid  black;}
-tbody {       outline: 1px solid  gray;}
-td {          outline: 1px solid  dodgerblue;}
-textarea {    outline: 1px solid  dimgray;}
-tfoot {       outline: 1px solid  deepskyblue;}
-th {          outline: 1px solid  green;}
-thead {       outline: 1px solid  lightsteelblue;}
-time {        outline: 1px solid  lightslategray;}
-tr {          outline: 1px solid  lime;}
-ul {          outline: 1px solid  limegreen;}
-var {         outline: 1px solid  firebrick;}
+a, abbr, address, article, blockquote, caption, code, div, dl, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, img, input, label, legend, li, nav, ol, option, p, pre, progress, s, samp, sbd, section, select, code, small, span, sub, submit, sup, table, tbody, td, textarea, tfoot, th, thead, time, tr, ul, var {
+   outline-width: 1px;
+   outline-style: solid;
+}
+
+a { outline-color: crimson; }
+abbr { outline-color: cyan; }
+address { outline-color: aquamarine; }
+article { outline-color: blueviolet; }
+blockquote { outline-color: cadetblue; }
+caption { outline-color: cornflowerblue; }
+code { outline-color: coral; }
+div { outline-color: orchid; }
+dl { outline-color: darkcyan; }
+fieldset { outline-color: darkmagenta; }
+figcaption { outline-color: darkorange; }
+figure { outline-color: deeppink; }
+footer { outline-color: gold; }
+form { outline-color: goldenrod; }
+h1 { outline-color: greenyellow; }
+h2 { outline-color: lavender; }
+h3 { outline-color: lightblue; }
+h4 { outline-color: lightcoral; }
+h5 { outline-color: lightcyan; }
+h6 { outline-color: lightgreen; }
+header { outline-color: lightsalmon; }
+hr { outline-color: lightseagreen; }
+img { outline-color: lightskyblue; }
+input { outline-color: mediumaquamarine; }
+label { outline-color: mediumorchid; }
+legend { outline-color: orangered; }
+li { outline-color: palevioletred; }
+nav { outline-color: plum; }
+ol { outline-color: purple; }
+option { outline-color: royalblue; }
+p { outline-color: tomato; }
+pre { outline-color: turquoise; }
+progress { outline-color: violet; }
+s { outline-color: yellow; }
+samp { outline-color: sandybrown; }
+sbd { outline-color: brown; }
+section { outline-color: powderblue; }
+select { outline-color: palegreen; }
+code { outline-color: navy; }
+small { outline-color: mediumpurple; }
+span { outline-color: mediumslateblue; }
+sub { outline-color: mintcream; }
+submit { outline-color: mistyrose; }
+sup { outline-color: moccasin; }
+table { outline-color: black; }
+tbody { outline-color: grey; }
+td { outline-color: dodgerblue; }
+textarea { outline-color: dimgrey; }
+tfoot { outline-color: deepskyblue; }
+th { outline-color: green; }
+thead { outline-color: lightsteelblue; }
+time { outline-color: lightslategrey; }
+tr { outline-color: lime; }
+ul { outline-color: limegreen; }
+var { outline-color: firebrick; }
 
