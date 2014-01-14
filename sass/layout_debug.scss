@@ -1,10 +1,6 @@
-$layout-debug: true!important; // You can put this in your variables file... or leave it here.
-                     // If you set it to anything other than true, the outlines will
-                     // disappear.
+$layout-debug: true;
 
 @if $layout-debug == true {
-
-  /* Section elements : Blue */
 
   body {        outline: 1px solid  #2980B9!important; }
   article {     outline: 1px solid  #3498DB!important; }
@@ -23,7 +19,6 @@ $layout-debug: true!important; // You can put this in your variables file... or 
   address {     outline: 1px solid  #1A2C51!important; }
   div {         outline: 1px solid  #036CDB!important; }
 
-  /* Grouping Elements : Red */
 
   p {           outline: 1px solid  #AC050B!important; }
   hr {          outline: 1px solid  #FF063F!important; }
@@ -39,7 +34,6 @@ $layout-debug: true!important; // You can put this in your variables file... or 
   figcaption {  outline: 1px solid  #BF0032!important; }
 
 
-  /* Tables : */
 
   table {       outline: 1px solid  #00CC99!important; }
   caption {     outline: 1px solid  #37FFC4!important; }
@@ -52,8 +46,6 @@ $layout-debug: true!important; // You can put this in your variables file... or 
   col {         outline: 1px solid  #6C9A8F!important; }
   colgroup {    outline: 1px solid  #6C9A9D!important; }
 
-
-  /* Forms : Orange */
 
   button {      outline: 1px solid  #DA8301!important; }
   datalist {    outline: 1px solid  #C06000!important; }
@@ -72,7 +64,6 @@ $layout-debug: true!important; // You can put this in your variables file... or 
   textarea {    outline: 1px solid  #CC5400!important; }
 
 
-  /* Interactive */
 
   details {     outline: 1px solid  #33848F!important; }
   summary {     outline: 1px solid  #60A1A6!important; }
@@ -80,13 +71,11 @@ $layout-debug: true!important; // You can put this in your variables file... or 
   menu {        outline: 1px solid  #449DA6!important; }
 
 
-  /* Edits : Red */
 
   del {         outline: 1px solid  #BF0000!important; }
   ins {         outline: 1px solid  #400000!important; }
 
 
-  /* Embedded : Green */
 
   img     {     outline: 1px solid #22746B!important; }
   iframe  {     outline: 1px solid #64A7A0!important; }
@@ -102,7 +91,6 @@ $layout-debug: true!important; // You can put this in your variables file... or 
   area    {     outline: 1px solid #305900!important; }
 
 
-  /* Text Level : Pinks & Magentas */
 
   a {           outline: 1px solid #FF62AB!important; }
   em {          outline: 1px solid #800B41!important; }
@@ -113,7 +101,7 @@ $layout-debug: true!important; // You can put this in your variables file... or 
   s {           outline: 1px solid #F805E3!important; }
   small {       outline: 1px solid #D107B2!important; }
   abbr {        outline: 1px solid #4A0263!important; }
-  q       {     outline: 1px solid #240018!important; }
+  q {           outline: 1px solid #240018!important; }
   cite {        outline: 1px solid #64003C!important; }
   dfn {         outline: 1px solid #B4005A!important; }
   sub {         outline: 1px solid #DBA0C8!important; }
@@ -134,3 +122,4 @@ $layout-debug: true!important; // You can put this in your variables file... or 
   wbr {         outline: 1px solid #DB175B!important; }
 
 }
+
