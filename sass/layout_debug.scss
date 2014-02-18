@@ -1,125 +1,147 @@
+// You can put this in your variables file
 $layout-debug: true;
 
+// Color mapping
+$color_map:
+  
+  /* Section elements : Blue */
+  body        #2980B9,
+  article     #3498DB,
+  nav         #0088C3,
+  aside       #33A0CE,
+  section     #66B8DA,
+  header      #99CFE7,
+  footer      #CCE7F3,
+  h1          #162544,
+  h2          #314E6E,
+  h3          #3E5E85,
+  h4          #449BAF,
+  h5          #C7D1CB,
+  h6          #4371D0,
+  main        #2F4F90,
+  address     #1A2C51,
+  div         #036CDB,
+
+  /* Grouping Elements : Red */
+  p           #AC050B,
+  hr          #FF063F,
+  pre         #850440,
+  blockquote  #F1B8E7,
+  ol          #FF050C,
+  ul          #D90416,
+  li          #D90416,
+  dl          #FD3427,
+  dt          #FF0043,
+  dd          #E80174,
+  figure      #FF00BB,
+  figcaption  #BF0032,
+
+  /* Tables :
+  table       #00CC99,
+  caption     #37FFC4,
+  thead       #98DACA,
+  tbody       #64A7A0,
+  tfoot       #22746B,
+  tr          #86C0B2,
+  th          #A1E7D6,
+  td          #3F5A54,
+  col         #6C9A8F,
+  colgroup    #6C9A9D,
+
+  /* Forms : Orange */
+  button      #DA8301,
+  datalist    #C06000,
+  fieldset    #D95100,
+  form        #D23600,
+  input       #FCA600,
+  keygen      #B31E00,
+  label       #EE8900,
+  legend      #DE6D00,
+  meter       #E8630C,
+  optgroup    #B33600,
+  option      #FF8A00,
+  output      #FF9619,
+  progress    #E57C00,
+  select      #E26E0F,
+  textarea    #CC5400,
+
+  /* Interactive */
+  details     #33848F,
+  summary     #60A1A6,
+  command     #438DA1,
+  menu        #449DA6,
+
+  /* Edits : Red */
+  del         #BF0000,
+  ins         #400000,
+
+  /* Embedded : Green */
+  img         #22746B,
+  iframe      #64A7A0,
+  embed       #98DACA,
+  object      #00CC99,
+  param       #37FFC4,
+  video       #6EE866,
+  audio       #027353,
+  source      #012426,
+  canvas      #A2F570,
+  track       #59A600,
+  map         #7BE500,
+  area        #305900,
+
+  /* Text Level : Pinks & Magentas */
+  a           #FF62AB,
+  em          #800B41,
+  strong      #FF1583,
+  i           #803156,
+  b           #CC1169,
+  u           #FF0430,
+  s           #F805E3,
+  small       #D107B2,
+  abbr        #4A0263,
+  q           #240018,
+  cite        #64003C,
+  dfn         #B4005A,
+  sub         #DBA0C8,
+  sup         #CC0256,
+  time        #D6606D,
+  code        #E04251,
+  kbd         #5E001F,
+  samp        #9C0033,
+  var         #D90047,
+  mark        #FF0053,
+  bdi         #BF3668,
+  bdo         #6F1400,
+  ruby        #FF7B93,
+  rt          #FF2F54,
+  rp          #803E49,
+  span        #CC2643,
+  br          #DB687D,
+  wbr         #DB175B;
+
+// check if debug is enable (top variable)
 @if $layout-debug == true {
 
-  body {        outline: 1px solid  #2980B9!important; }
-  article {     outline: 1px solid  #3498DB!important; }
-  nav {         outline: 1px solid  #0088C3!important; }
-  aside {       outline: 1px solid  #33A0CE!important; }
-  section {     outline: 1px solid  #66B8DA!important; }
-  header {      outline: 1px solid  #99CFE7!important; }
-  footer {      outline: 1px solid  #CCE7F3!important; }
-  h1 {          outline: 1px solid  #162544!important; }
-  h2 {          outline: 1px solid  #314E6E!important; }
-  h3 {          outline: 1px solid  #3E5E85!important; }
-  h4 {          outline: 1px solid  #449BAF!important; }
-  h5 {          outline: 1px solid  #C7D1CB!important; }
-  h6 {          outline: 1px solid  #4371D0!important; }
-  main {        outline: 1px solid  #2F4F90!important; }
-  address {     outline: 1px solid  #1A2C51!important; }
-  div {         outline: 1px solid  #036CDB!important; }
+  // Create a empty varaible
+  $selectors: (null);
 
+  // For each item in list
+  @each $item in $color_map {
 
-  p {           outline: 1px solid  #AC050B!important; }
-  hr {          outline: 1px solid  #FF063F!important; }
-  pre {         outline: 1px solid  #850440!important; }
-  blockquote {  outline: 1px solid  #F1B8E7!important; }
-  ol {          outline: 1px solid  #FF050C!important; }
-  ul {          outline: 1px solid  #D90416!important; }
-  li {          outline: 1px solid  #D90416!important; }
-  dl {          outline: 1px solid  #FD3427!important; }
-  dt {          outline: 1px solid  #FF0043!important; }
-  dd {          outline: 1px solid  #E80174!important; }
-  figure {      outline: 1px solid  #FF00BB!important; }
-  figcaption {  outline: 1px solid  #BF0032!important; }
+      // select first value (selector)
+      #{nth($item, 1)} {
 
+          // applay outline color with second value (color)
+          outline-color: nth($item, 2)!important;
+      }
 
+      // Add the selector to the selectors list
+      $selectors: append($selectors, unquote('#{nth($item, 1)}'), comma);
+  }
 
-  table {       outline: 1px solid  #00CC99!important; }
-  caption {     outline: 1px solid  #37FFC4!important; }
-  thead {       outline: 1px solid  #98DACA!important; }
-  tbody {       outline: 1px solid  #64A7A0!important; }
-  tfoot {       outline: 1px solid  #22746B!important; }
-  tr {          outline: 1px solid  #86C0B2!important; }
-  th {          outline: 1px solid  #A1E7D6!important; }
-  td {          outline: 1px solid  #3F5A54!important; }
-  col {         outline: 1px solid  #6C9A8F!important; }
-  colgroup {    outline: 1px solid  #6C9A9D!important; }
-
-
-  button {      outline: 1px solid  #DA8301!important; }
-  datalist {    outline: 1px solid  #C06000!important; }
-  fieldset {    outline: 1px solid  #D95100!important; }
-  form {        outline: 1px solid  #D23600!important; }
-  input {       outline: 1px solid  #FCA600!important; }
-  keygen {      outline: 1px solid  #B31E00!important; }
-  label {       outline: 1px solid  #EE8900!important; }
-  legend {      outline: 1px solid  #DE6D00!important; }
-  meter {       outline: 1px solid  #E8630C!important; }
-  optgroup {    outline: 1px solid  #B33600!important; }
-  option {      outline: 1px solid  #FF8A00!important; }
-  output {      outline: 1px solid  #FF9619!important; }
-  progress {    outline: 1px solid  #E57C00!important; }
-  select {      outline: 1px solid  #E26E0F!important; }
-  textarea {    outline: 1px solid  #CC5400!important; }
-
-
-
-  details {     outline: 1px solid  #33848F!important; }
-  summary {     outline: 1px solid  #60A1A6!important; }
-  command {     outline: 1px solid  #438DA1!important; }
-  menu {        outline: 1px solid  #449DA6!important; }
-
-
-
-  del {         outline: 1px solid  #BF0000!important; }
-  ins {         outline: 1px solid  #400000!important; }
-
-
-
-  img     {     outline: 1px solid #22746B!important; }
-  iframe  {     outline: 1px solid #64A7A0!important; }
-  embed   {     outline: 1px solid #98DACA!important; }
-  object  {     outline: 1px solid #00CC99!important; }
-  param   {     outline: 1px solid #37FFC4!important; }
-  video   {     outline: 1px solid #6EE866!important; }
-  audio   {     outline: 1px solid #027353!important; }
-  source  {     outline: 1px solid #012426!important; }
-  canvas  {     outline: 1px solid #A2F570!important; }
-  track   {     outline: 1px solid #59A600!important; }
-  map     {     outline: 1px solid #7BE500!important; }
-  area    {     outline: 1px solid #305900!important; }
-
-
-
-  a {           outline: 1px solid #FF62AB!important; }
-  em {          outline: 1px solid #800B41!important; }
-  strong {      outline: 1px solid #FF1583!important; }
-  i {           outline: 1px solid #803156!important; }
-  b {           outline: 1px solid #CC1169!important; }
-  u {           outline: 1px solid #FF0430!important; }
-  s {           outline: 1px solid #F805E3!important; }
-  small {       outline: 1px solid #D107B2!important; }
-  abbr {        outline: 1px solid #4A0263!important; }
-  q {           outline: 1px solid #240018!important; }
-  cite {        outline: 1px solid #64003C!important; }
-  dfn {         outline: 1px solid #B4005A!important; }
-  sub {         outline: 1px solid #DBA0C8!important; }
-  sup {         outline: 1px solid #CC0256!important; }
-  time {        outline: 1px solid #D6606D!important; }
-  code {        outline: 1px solid #E04251!important; }
-  kbd {         outline: 1px solid #5E001F!important; }
-  samp {        outline: 1px solid #9C0033!important; }
-  var {         outline: 1px solid #D90047!important; }
-  mark {        outline: 1px solid #FF0053!important; }
-  bdi {         outline: 1px solid #BF3668!important; }
-  bdo {         outline: 1px solid #6F1400!important; }
-  ruby {        outline: 1px solid #FF7B93!important; }
-  rt {          outline: 1px solid #FF2F54!important; }
-  rp {          outline: 1px solid #803E49!important; }
-  span {        outline: 1px solid #CC2643!important; }
-  br {          outline: 1px solid #DB687D!important; }
-  wbr {         outline: 1px solid #DB175B!important; }
-
+  // Select all and apply default outline style
+  #{$selectors} {
+    outline-width: 1px!important; 
+    outline-style: solid!important;
+  }
 }
-
