@@ -6,289 +6,326 @@
     <meta name="author" content="mrmrs">
     <meta name="description" content="A small tool to make debugging css a little bit easier.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/layout_debug.css">
     <style>
       body { font-family: avenir, helvetica, arial, sans-serif; }
-      * { padding: 10px; margin: 20px; max-width: 100%; }
+      .no-outline { outline: 0!important; }
+      .examples * { padding: .5rem; margin: 1rem; transtion: outline-color 3s ease-in-out; -webkit-transition: outline-color 3s ease-in-out;}
+      .button { text-decoration: none; border-radius: .25rem; border: 2px solid #333; display: inline-block; padding: .75rem .5rem; font-size: 14px; color: #333; }
     </style>
+    <link rel="stylesheet" href="css/i.css">
+    <link rel="stylesheet" href="css/layout_debug.css">
   </head>
-  <body>
-    <header>
-      <h1>Pesticide</h1>
-      <h2>Kill your css layout bugs faster.</h2>
-      <p>
-        Cascading Style Sheets can be tricky. Placing an outline on every element can help
-        you quickly figure out what the fuck is going on.
+  <body class="no-outline">
+    <header class="no-outline pam pal-l">
+      <h1 class="no-outline tracked mega-l mbn ">PESTICIDE</h1>
+      <h2 class="no-outline f2 fw1 ">Faster CSS layout debugging</h2>
+      <p class="no-outline f5 f3-ns lh-copy mbn tl">
+        Cascading Style Sheets can be tricky. <br>Placing an outline on every element can help
+        you figure out what the fuck is going on. <br>This little css module does exactly just that.
       </p>
+      <div class="mtm download-the-worst-code-ever no-outline">
+      <a href="https://twitter.com/intent/tweet?text=Pesticide: Faster css layout debugging made easy. &url=http://pesticide.it&via=mrmrs_" target="_blank" class="no-outline button button-box-white">
+        <svg class="geomicon no-outline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16">
+          <path d="M2 4 C6 8 10 12 15 11 A6 6 0 0 1 22 4 A6 6 0 0 1 26 6 A8 8 0 0 0 31 4 A8 8 0 0 1 28 8 A8 8 0 0 0 32 7 A8 8 0 0 1 28 11 A18 18 0 0 1 10 30 A18 18 0 0 1 0 27 A12 12 0 0 0 8 24 A8 8 0 0 1 3 20 A8 8 0 0 0 6 19.5 A8 8 0 0 1 0 12 A8 8 0 0 0 3 13 A8 8 0 0 1 2 4"/>
+        </svg>
+        Tweet
+      </a>
+      </div>
+      <h2 class="no-outline">Using Pesticide</h2>
+      <p class="no-outline mbn">
+        Download <a href="https://raw.github.com/mrmrs/pesticide/master/css/layout_debug.css" class="link purple">&nbsp;the css file here&nbsp;</a>  &nbsp;and include it in your html document like so
+      </p>
+<pre class="no-outline">
+<code class="no-outline purple f6">
+&lt;link rel="stylesheet" href="css/layout_debug.css"&gt;
+</code>
+</pre>
+<p class="no-outline" style="max-width: 32em;">
+  Adding a file to the head of your html document can kind of be a pain if you are toggling it on and off.
+  You can add pesticide as a sass partial and it will only render out if you set
+</p>
+  <pre class="no-outline"><code class="no-outline purple lh-copy">
+$pesticide-debug: true;
+@import "pesticide";
+  </code></pre>
+  <br>
+  <p class="no-outline">
+  <a class="link purple" href="http://github.com/mrmrs/pesticide" title="pesticide source on github">&nbsp;Grab the source&nbsp;</a>&nbsp;
+   to use this method or modify it to fit your needs.
+ </p>
     </header>
-
-    <section>
-      <header>
-        <h1>Examples</h1>
+    <main class="mtn">
+      <header class="no-outline pam pal-l">
+        <h1 class="no-outline tracked fw1 mtl" style="margin-left:0!important;padding:0!important;">EXAMPLES</h1>
+        <p class="no-outline mln pan">Below is a comprehensive list of html elements as well as some common markup patterns.</p>
+        <p class="no-outline mln pan"> Resize the browser and watch how
+          various elements change their relationship to one another.
+        </p>
       </header>
+      <div class="examples">
         <h1>Site title</h1>
         <nav>
-        <ul>
-          <li>List 1 </li>
-          <li>List 2 </li>
-          <li>List 3 </li>
-          <li>List 4 </li>
-          <li>List 5 </li>
-        </ul>
-      </nav>
-    <section>
-      <h1>Header 1</h1>
-      <h2>Header 2</h2>
-      <h3>Header 3</h3>
-      <h4>Header 4</h4>
-      <h5>Header 5</h5>
-      <h6>Header 6</h6>
-    </section>
-    <section>
-      <h1>Links</h1>
-      <a href="#">Sample text link</a>
-      <a href="#">Sample button link</a>
-    </section>
-    <section>
-      <h1>Lists</h1>
-      <ul>
-        <li>List Item 1</li>
-        <li>List Item 2</li>
-        <li>List Item 3</li>
-        <li>List Item 4</li>
-        <li>List Item 5</li>
-        <li>List Item 6</li>
-      </ul>
-      <ul>
-        <li>List Item 1</li>
-        <li>List Item 2</li>
-        <li>List Item 3</li>
-        <li>List Item 4</li>
-        <li>List Item 5</li>
-        <li>List Item 6</li>
-      </ul>
-      <ol>
-        <li>First</li>
-        <li>Second</li>
-        <li>Third</li>
-        <li>Fourth</li>
-        <li>Fifth</li>
-        <li>Sixth</li>
-      </ol>
-      <dl>
-        <dt> Kick </dt>
-        <dd> 808 </dd>
-        <dt> Snare </dt>
-        <dd> 909 </dd>
-      </dl>
-      <dl>
-        <dt> Maine </dt>
-        <dd> Augusta </dd>
-        <dt> California </dt>
-        <dd> Sacremento </dd>
-        <dt> Oregon </dt>
-        <dd> Salem </dd>
-        <dt> New York </dt>
-        <dd> Albany </dd>
-      </dl>
-    </section>
-
-    <section>
-      <h1>Forms</h1>
-      <form>
-        <fieldset>
-          <!--
-          Every fieldset must contain a legend. IE barfs if it's not there.
-          It's no fun.
-          -->
-          <legend>Legend Example</legend>
-
-          <div>
-            <label>Text Input Label</label>
-            <input type="text" />
-            <p>Helper text if necessary.</p>
-          </div>
-          <div>
-            <label>Password</label>
-            <input type="password" />
-            <p>Error messages when appropriate.</p>
-          </div>
-
-          <div>
-            <label for="first-name">First Name</label>
-            <input type="text" id="first-name" />
-          </div>
-
-          <div>
-            <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" />
-          </div>
-
-          <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" />
-          </div>
-
-          <div>
-            <label for="gender">Dropdown</label>
-            <select>
-              <option>Option 1</option>
-              <option>Option 2</option>
-              <option>Option 3</option>
-            </select>
-        </div>
-        <div>
-          <label>Radio Buttons</label>
           <ul>
-            <li><label><input type="radio" /> Label 1</label></li>
-            <li><label><input type="radio" /> Label 2</label></li>
-            <li><label><input type="radio" /> Label 3</label></li>
+            <li>List 1 </li>
+            <li>List 2 </li>
+            <li>List 3 </li>
+            <li>List 4 </li>
+            <li>List 5 </li>
           </ul>
-        </div>
-        <div>
-          <label for="url">URL Input</label>
-          <input type="url" placeholder="http://mrmrs.cc" />
-        </div>
-        <div>
-          <label>Text area</label>
-          <textarea></textarea>
-        </div>
-        <div>
-          <label><input type="checkbox" /> This is a checkbox.</label>
-        </div>
-        <div>
-          <input type="submit" value="Submit" />
-        </div>
-    </fieldset>
-</form>
-</section>
-    <section>
-      <h1>Buttons</h1>
-      <button>A button</button>
-      <button>A button</button>
-      <button>A large button</button>
-    </section>
-    <hr />
-    <section>
-      <h1>An Example Article</h1>
-      <article>
-        <h1>Title</h1>
-        <p>
-          Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit</b>, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud <em>exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat</em>. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-          non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <blockquote>
-          <p>
-            This is a GREAT pull quote.
-          </p>
-          <a href="#">- Author</a>
-        </blockquote>
-        <p>
-          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-          consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt
-          ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
-          veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
-          ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit
-          qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum
-          qui dolorem eum fugiat quo voluptas nulla pariatur?"
-        </p>
-        <p>
-          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-          praesentium voluptatum deleniti atque corrupti quos dolores et quas
-          molestias excepturi sint occaecati cupiditate non provident, similique sunt
-          in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
-          fuga. Et harum quidem rerum facilis est et expedita distinctio.
-        </p>
-      </article>
-    </section>
-    <hr />
+        </nav>
+        <section>
+          <h1>Header 1</h1>
+          <h2>Header 2</h2>
+          <h3>Header 3</h3>
+          <h4>Header 4</h4>
+          <h5>Header 5</h5>
+          <h6>Header 6</h6>
+        </section>
+        <section>
+          <h1>Links</h1>
+          <a href="#">Sample text link</a>
+          <a href="#">Sample button link</a>
+        </section>
+        <section>
+          <h1>Lists</h1>
+          <ul>
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3</li>
+            <li>List Item 4</li>
+            <li>List Item 5</li>
+            <li>List Item 6</li>
+          </ul>
+          <ul>
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3</li>
+            <li>List Item 4</li>
+            <li>List Item 5</li>
+            <li>List Item 6</li>
+          </ul>
+          <ol>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+            <li>Fourth</li>
+            <li>Fifth</li>
+            <li>Sixth</li>
+          </ol>
+          <dl>
+            <dt> Kick </dt>
+            <dd> 808 </dd>
+            <dt> Snare </dt>
+            <dd> 909 </dd>
+          </dl>
+          <dl>
+            <dt> Maine </dt>
+            <dd> Augusta </dd>
+            <dt> California </dt>
+            <dd> Sacremento </dd>
+            <dt> Oregon </dt>
+            <dd> Salem </dd>
+            <dt> New York </dt>
+            <dd> Albany </dd>
+          </dl>
+        </section>
 
-    <section>
-      <h1>Code examples</h1>
-      <code>
-        <pre>
+        <section>
+          <h1>Forms</h1>
+          <form>
+            <fieldset>
+              <!--
+              Every fieldset must contain a legend. IE barfs if it's not there.
+              It's no fun.
+              -->
+              <legend>Legend Example</legend>
+
+              <div>
+                <label>Text Input Label</label>
+                <input type="text" />
+                <p>Helper text if necessary.</p>
+              </div>
+              <div>
+                <label>Password</label>
+                <input type="password" />
+                <p>Error messages when appropriate.</p>
+              </div>
+
+              <div>
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" />
+              </div>
+
+              <div>
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" />
+              </div>
+
+              <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" />
+              </div>
+
+              <div>
+                <label for="gender">Dropdown</label>
+                <select>
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+              <div>
+                <label>Radio Buttons</label>
+                <ul>
+                  <li><label><input type="radio" /> Label 1</label></li>
+                  <li><label><input type="radio" /> Label 2</label></li>
+                  <li><label><input type="radio" /> Label 3</label></li>
+                </ul>
+              </div>
+              <div>
+                <label for="url">URL Input</label>
+                <input type="url" placeholder="http://mrmrs.cc" />
+              </div>
+              <div>
+                <label>Text area</label>
+                <textarea></textarea>
+              </div>
+              <div>
+                <label><input type="checkbox" /> This is a checkbox.</label>
+              </div>
+              <div>
+                <input type="submit" value="Submit" />
+              </div>
+            </fieldset>
+          </form>
+        </section>
+        <section>
+          <h1>Buttons</h1>
+          <button>A button</button>
+          <button>A button</button>
+          <button>A large button</button>
+        </section>
+        <hr />
+        <section>
+          <h1>An Example Article</h1>
+          <article>
+            <h1>Title</h1>
+            <p>
+              Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit</b>, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud <em>exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat</em>. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+              non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <blockquote>
+              <p>
+                This is a GREAT pull quote.
+              </p>
+              <a href="#">- Author</a>
+            </blockquote>
+            <p>
+              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+              consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt
+              ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
+              veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
+              ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit
+              qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum
+              qui dolorem eum fugiat quo voluptas nulla pariatur?"
+            </p>
+            <p>
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+              praesentium voluptatum deleniti atque corrupti quos dolores et quas
+              molestias excepturi sint occaecati cupiditate non provident, similique sunt
+              in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
+              fuga. Et harum quidem rerum facilis est et expedita distinctio.
+            </p>
+          </article>
+        </section>
+        <hr />
+
+        <section>
+          <h1>Code examples</h1>
+          <code>
+            <pre>
       sudo ipfw pipe 1 config bw 256KByte/s
       sudo ipfw add 1 pipe 1 src-port 3000
     </pre>
-    </code>
-  </section>
-  <hr />
-  <section>
-    <h1>Footer</h1>
-    <footer>
-      <p>Copyright 2013. Made with love by <a href="http://mrmrs.cc" title="MRMRS - Designer">mrmrs</a>.</p>
-      <ul>
-        <li>
-        <a href="#">Home</a>
-    </li>
-    <li>
-    <a href="#">Contact</a>
-</li>
-<li>
-<a href="#">Jobs</a>
-           </li>
-         </ul>
-         <ul>
-           <li>
-           <a href="http://twitter.com" title=" on Twitter">Twitter</a>
-       </li>
-       <li>
-       <a href="http://pinterest.com" title=" on Pinterest">Pinterest</a>
-   </li>
-   <li>
-   <a href="http://instagram.com" title=" on Instagram">Instagram</a>
-           </li>
-           <li>
-           <a href="http://dribbbble.com" title=" on Dribbble">Dribbble</a>
-       </li>
-       <li>
-       <a href="http://github.com" title=" on Github">Github</a>
-   </li>
- </ul>
-      </footer>
-    </section>
+        </code>
+      </section>
+      <hr />
+      <section>
+        <h1>Footer</h1>
+        <footer>
+          <p>Copyright 2013. Made with love by <a href="http://mrmrs.cc" title="MRMRS - Designer">mrmrs</a>.</p>
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <a href="#">Jobs</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="http://twitter.com" title=" on Twitter">Twitter</a>
+            </li>
+            <li>
+              <a href="http://pinterest.com" title=" on Pinterest">Pinterest</a>
+            </li>
+            <li>
+              <a href="http://instagram.com" title=" on Instagram">Instagram</a>
+            </li>
+            <li>
+              <a href="http://dribbbble.com" title=" on Dribbble">Dribbble</a>
+            </li>
+            <li>
+              <a href="http://github.com" title=" on Github">Github</a>
+            </li>
+          </ul>
+        </footer>
+      </section>
 
-    <section>
-      <h1 class="other-class">New hawtness</h1>
-      <progress value="80" max="100">80 %</progress>
-      <p class="test-class">We are this close to the goal: <meter min="0" max="1000" value="824">$824</meter>.</p>
-    </section>
+      <section>
+        <h1 class="other-class">New hawtness</h1>
+        <progress value="80" max="100">80 %</progress>
+        <p class="test-class">We are this close to the goal: <meter min="0" max="1000" value="824">$824</meter>.</p>
+      </section>
 
-    <section>
-    <header>
-      <h1 class="other-class">Random Stuff</h1>
-    </header>
-    <small>This is for things like copyright info</small>
-    <s>Content that isn't accurate or relevant anymore.</s>
-    <span>Generic span wrapper</span>
-    <abbr>HTML How to meet ladies</abbr>
-    <p class="test-class">This is inline text with <sub>subscript</sub> and <sup>superscript</sup> elements.</p>
-    <p class="test-class">
-      <var>f</var>(<var>x</var>) = <var>a</var><sub>0</sub> + <var>a</var><sub>1</sub><var>x</var> +
-      <var>a</var><sub>2</sub><var>x</var><sup>2</sup>, where <var>a</var><sup>2</sup> ≠ 0
-    </p>
-    <time datetime="2013-09-07" pubdate>07 September 2013</time>
-  </section>
+      <section>
+        <header>
+          <h1 class="other-class">Random Stuff</h1>
+        </header>
+        <small>This is for things like copyright info</small>
+        <s>Content that isn't accurate or relevant anymore.</s>
+        <span>Generic span wrapper</span>
+        <abbr>HTML How to meet ladies</abbr>
+        <p class="test-class">This is inline text with <sub>subscript</sub> and <sup>superscript</sup> elements.</p>
+        <p class="test-class">
+          <var>f</var>(<var>x</var>) = <var>a</var><sub>0</sub> + <var>a</var><sub>1</sub><var>x</var> +
+          <var>a</var><sub>2</sub><var>x</var><sup>2</sup>, where <var>a</var><sup>2</sup> ≠ 0
+        </p>
+        <time datetime="2013-09-07" pubdate>07 September 2013</time>
+      </section>
 
-  <section>
-    <figure>
-      <img src="/img/figure-example.jpg" alt="Figure Example">
-      <figcaption>
-      Photo of the sky at night. Original by <a href="http://flickr.com/photos/heyitsadam/">@mrmrs</a>
-  </figcaption>
-    </figure>
-  </section>
+      <section>
+        <figure>
+          <img src="/img/figure-example.jpg" alt="Figure Example">
+          <figcaption>
+            Photo of the sky at night. Original by <a href="http://flickr.com/photos/heyitsadam/">@mrmrs</a>
+          </figcaption>
+        </figure>
+      </section>
 
-  <section>
-    <!--
-    http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-samp-element
-    -->
-    <samp>
-    <pre>
+      <section>
+        <!--
+        http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-samp-element
+        -->
+        <samp>
+          <pre>
           /Sites/html master  ☠ ☢
           $  <kbd>ls -gto</kbd>
 
@@ -310,8 +347,8 @@
           -rw-r--r--   1    1046 Jun  4 15:59 touch-icon-iphone-precomposed.png
           -rw-r--r--   1    1779 Jun  4 15:59 touch-icon-iphone-retina-precomposed.png
         </pre>
-  </samp>
-</section>
+      </samp>
+    </section>
     <section>
       <h1 class="other-class">Tables</h1>
       <table>
@@ -332,52 +369,57 @@
             <td>13 May, 2013</td>
             <td>999 Spruce Lane, Somewhere, CA 94101</td>
           </tr>
-            <tr>
-              <td>#888-32dd</td>
-              <td>Sample Name</td>
-              <td>17 May, 1984</td>
-              <td>999 Spruce Lane, Somewhere, CA 94101</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      <section>
-        <h1>Floats</h1>
-        <div>
-          <img src="http://placekitten.com/200/150" style="float:left;">
-          <p>
-            This is an image that has been floated to the left of this paragraph.
-            The parent element that contains the image and paragraph does not have a clearfix applied to it.
-            As you can see. All these lines tell us a few things. What they tell us, well, that is a story
-            for another time.
-          </p>
-        </div>
-      </section>
-      <section>
-        <h1>Common inline-block problems</h1>
-        <div>
-          <h2>Four elements set to inline-block and width: 25%</h2>
-          <p>Notice how the whitespace between the elements gets rendered, this is why the fourth element breaks to a separate line.</p>
-          <div style="width:25%; display: inline-block;margin: 0;">
-            Div 1
-          </div>
-          <div style="width:25%; display: inline-block;margin: 0;">
-            Div 2
-          </div>
-          <div style="width:25%; display: inline-block;margin: 0;">
-            Div 3
-          </div>
-          <div style="width:25%; display: inline-block;margin:0; ">
-            Div 4
-          </div>
-        </div>
-      </section>
-      <section>
-        <footer>
-          <small>© 2014 Some company name</small>
-          <address> hi@mrmrs.cc </address>
-        </footer>
-      </section>
+          <tr>
+            <td>#888-32dd</td>
+            <td>Sample Name</td>
+            <td>17 May, 1984</td>
+            <td>999 Spruce Lane, Somewhere, CA 94101</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
+    <section>
+      <h1>Floats</h1>
+      <div>
+        <img src="http://placekitten.com/200/150" style="float:left;">
+        <p>
+          This is an image that has been floated to the left of this paragraph.
+          The parent element that contains the image and paragraph does not have a clearfix applied to it.
+          As you can see. All these lines tell us a few things. What they tell us, well, that is a story
+          for another time.
+        </p>
+      </div>
+    </section>
+    <section>
+      <h1>Common inline-block problems</h1>
+      <div>
+        <h2>Four elements set to inline-block and width: 25%</h2>
+        <p>Notice how the whitespace between the elements gets rendered, this is why the fourth element breaks to a separate line.</p>
+        <div style="width:25%; display: inline-block;margin: 0;">
+          Div 1
+        </div>
+        <div style="width:25%; display: inline-block;margin: 0;">
+          Div 2
+        </div>
+        <div style="width:25%; display: inline-block;margin: 0;">
+          Div 3
+        </div>
+        <div style="width:25%; display: inline-block;margin:0; ">
+          Div 4
+        </div>
+      </div>
+    </section>
+    <section>
+      <footer>
+        <small>© 2014 Some company name</small>
+        <address> hi@mrmrs.cc </address>
+      </footer>
+    </section>
+  </div>
+</main>
+<footer class="no-outline pam pal-ns">
+  Made with love by <a href="http://mrmrs.cc" title="murmurs - designer" class="no-outline link">mrmrs</a>
+</footer>
   </body>
 </html>
+
