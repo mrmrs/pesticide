@@ -9,13 +9,17 @@ Sometimes if I am trying to sleuth a layout problem in css, all I want
 is every single element on the page to show me where its outline is.
 And I want all the outline colors to be different per element because,
 well sometimes I need to tell stuff apart. This has proved much faster
-for me than clicking around in chrome dev tools when sleuthing what css
-is causing me problems.
+for me than clicking around in browser dev tools when trying to uncover
+what css is causing me problems.
 
 # Getting started
 
 If you like sass like me, you can just drop this partial into your includes. If you want to turn off
-outlines, just set the variable ```$layout-debug``` at the top of _layout_debug.scss to false (or anything that isn't true).
+outlines, just set the variable
+```
+$layout-debug
+```
+at the top of layout_debug.scss to false (or anything that isn't true).
 
 If you like to use vanilla css, you can either keep it commented out at the bottom of your css file,
 or include it as an extra request in the head of your html file like so...
@@ -26,6 +30,23 @@ Make sure not to send it to production though because that wouldn't be the best.
 
 *Enjoy. And feel free to make the color scheme more pretty and send a pull request :)*
 
+# Development
+
+If you want to tweak the source code you might find it useful to use some of the available gulp tasks
+included with the project. To set up automation with gulp just press the following keys
+```
+cd pesticide
+npm install -g gulp
+npm install
+gulp
+```
+
+That will set up:
+
+* Livereload
+* Sass compilation
+* Csslint
+* CSS minification
 
 # Author
 
