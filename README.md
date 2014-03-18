@@ -17,7 +17,7 @@ what css is causing me problems.
 If you like sass like me, you can just drop this partial into your includes. If you want to turn off
 outlines, just set the variable
 ```
-$layout-debug
+$pesticide-debug
 ```
 at the top of pesticide.scss to false (or anything that isn't true).
 
