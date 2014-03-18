@@ -19,12 +19,12 @@ outlines, just set the variable
 ```
 $layout-debug
 ```
-at the top of layout_debug.scss to false (or anything that isn't true).
+at the top of pesticide.scss to false (or anything that isn't true).
 
 If you like to use vanilla css, you can either keep it commented out at the bottom of your css file,
 or include it as an extra request in the head of your html file like so...
 ```
-<link rel="stylesheet" href="layout_debug.css">
+<link rel="stylesheet" href="pesticide.css">
 ```
 Make sure not to send it to production though because that wouldn't be the best.
 
