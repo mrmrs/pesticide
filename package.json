@@ -1,7 +1,7 @@
 {
   "name": "pesticide",
   "version": "0.1.0",
-  "description": "Kill your css layout bugs faster and easier with pesticide. Adds a uniquely colored outline to every element.",
+  "description": "Kill your css layout bugs without needing 2000 clicks in dev tools",
   "repository" : {
     "type" : "git" ,
     "url" : "http://github.com/mrmrs/pesticide.git"

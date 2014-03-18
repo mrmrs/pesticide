@@ -1,6 +1,10 @@
-$layout-debug: true;
+/*
+    pesticide v0.1.0 . @mrmrs . MIT
+*/
 
-@if $layout-debug == true {
+$pesticide-debug: true;
+
+@if $pesticide-debug == true {
 
   body {        outline: 1px solid  #2980B9!important; }
   article {     outline: 1px solid  #3498DB!important; }

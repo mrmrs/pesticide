@@ -9,19 +9,24 @@
     <link rel="stylesheet" href="css/layout_debug.css">
     <style>
       body { font-family: avenir, helvetica, arial, sans-serif; }
-      * { padding: 10px; margin: 20px; font-size: 16px; }
+      * { padding: 10px; margin: 20px; max-width: 100%; }
     </style>
   </head>
   <body>
     <header>
       <h1>Pesticide</h1>
       <h2>Kill your css layout bugs faster.</h2>
+      <p>
+        Cascading Style Sheets can be tricky. Placing an outline on every element can help
+        you quickly figure out what the fuck is going on.
+      </p>
     </header>
 
     <section>
-      <h1>Examples</h1>
       <header>
-        <a href="" title="Site title"><h1>Site title</h1></a>
+        <h1>Examples</h1>
+      </header>
+        <h1>Site title</h1>
         <nav>
         <ul>
           <li>List 1 </li>
@@ -31,7 +36,6 @@
           <li>List 5 </li>
         </ul>
       </nav>
-    </header>
     <section>
       <h1>Header 1</h1>
       <h2>Header 2</h2>
@@ -338,8 +342,39 @@
         </table>
       </section>
       <section>
+        <h1>Floats</h1>
+        <div>
+          <img src="http://placekitten.com/200/150" style="float:left;">
+          <p>
+            This is an image that has been floated to the left of this paragraph.
+            The parent element that contains the image and paragraph does not have a clearfix applied to it.
+            As you can see. All these lines tell us a few things. What they tell us, well, that is a story
+            for another time.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h1>Common inline-block problems</h1>
+        <div>
+          <h2>Four elements set to inline-block and width: 25%</h2>
+          <p>Notice how the whitespace between the elements gets rendered, this is why the fourth element breaks to a separate line.</p>
+          <div style="width:25%; display: inline-block;margin: 0;">
+            Div 1
+          </div>
+          <div style="width:25%; display: inline-block;margin: 0;">
+            Div 2
+          </div>
+          <div style="width:25%; display: inline-block;margin: 0;">
+            Div 3
+          </div>
+          <div style="width:25%; display: inline-block;margin:0; ">
+            Div 4
+          </div>
+        </div>
+      </section>
+      <section>
         <footer>
-          <small>© 2013 Some company name</small>
+          <small>© 2014 Some company name</small>
           <address> hi@mrmrs.cc </address>
         </footer>
       </section>
