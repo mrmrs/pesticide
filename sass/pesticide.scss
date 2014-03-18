@@ -2,7 +2,7 @@
     pesticide v0.1.0 . @mrmrs . MIT
 */
 
-$pesticide-debug: true;
+$pesticide-debug: true !default;
 
 @if $pesticide-debug == true {
 
