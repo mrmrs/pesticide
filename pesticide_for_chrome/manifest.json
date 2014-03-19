@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+
+  "name": "Pesticide for Chrome",
+  "short_name": "Pesticide",
+  "description": "This extension inserts the Pesticide CSS into the current page, outlining each element to better see placement on the page.",
+  "version": "0.2",
+
+  "permissions": [
+      "activeTab"
+  ],
+
+  "background": {
+    "scripts": ["pesticide.js"],
+    "persistent": false
+  },
+
+  "browser_action": {
+    "default_icon": "icon_16.png",
+    "default_title": "Toggle Pesticide"
+  },
+
+  "icons": {
+      "128": "icon_128.png",
+      "16": "icon_16.png",
+      "48": "icon_48.png"
+   },
+
+  "web_accessible_resources": [
+    "pesticide.min.css"
+  ]
+}
