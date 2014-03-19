@@ -9,7 +9,9 @@ var gulp = require('gulp'),
     prefix = require('gulp-autoprefixer'),
     minifyCSS = require('gulp-minify-css'),
     sass = require('gulp-ruby-sass'),
-    csslint = require('gulp-csslint');
+    csslint = require('gulp-csslint'),
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify');
 
 
 // Task to minify all css files in the css directory
@@ -20,6 +22,14 @@ gulp.task('minify-css', function(){
     .pipe(gulp.dest('./css/'));
 });
 
+// Task to compile the bookmarklet version of Pesticide
+
+gulp.task('minify-js', function() {
+  gulp.src('./js/pesticide.js')
+    .pipe(uglify())
+    .pipe(concat('pesticide.min.js'))
+    .pipe(gulp.dest('./js/'));
+});
 
 // Use csslint without box-sizing or compatible vendor prefixes (these
 // don't seem to be kept up to date on what to yell about)
