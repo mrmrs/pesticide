@@ -10,13 +10,15 @@ var gulp = require('gulp'),
     minifyCSS = require('gulp-minify-css'),
     sass = require('gulp-ruby-sass'),
     less = require('gulp-less'),
+    stylus = require('gulp-stylus'),
     csslint = require('gulp-csslint'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     preProcessor = 'sass',
     preProcessorExtensions = {
       'sass': '.scss',
-      'less': '.less'
+      'less': '.less',
+      'stylus': '.stylus'
     };
 
 
@@ -71,6 +73,18 @@ gulp.task('less', function () {
     gulp.src('./less/*.less')
       .pipe(watch(function(files) {
         return files.pipe(less())
+        .pipe(prefix())
+        .pipe(gulp.dest('./css/'))
+        .pipe(livereload(server));
+      }));
+});
+
+// Task that compiles stylus files down to good old css
+
+gulp.task('stylus', function () {
+    gulp.src('./stylus/*.styl')
+      .pipe(watch(function(files) {
+        return files.pipe(stylus())
         .pipe(prefix())
         .pipe(gulp.dest('./css/'))
         .pipe(livereload(server));
