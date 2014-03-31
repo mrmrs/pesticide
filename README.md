@@ -14,12 +14,21 @@ what css is causing me problems.
 
 # Getting started
 
-If you like sass like me, you can just drop this partial into your includes. If you want to turn off
-outlines, just set the variable
+If you like pre-processing your css like I do, you can drop any of the Sass, Less, or Stylus partials into your includes.
+Each version of Pesticide sets a debug variable at the top of the partial, which you can set to false if you want to turn off
+outlines:
 ```
-$pesticide-debug
+// sass
+$pesticide-debug: false;
 ```
-at the top of pesticide.scss to false (or anything that isn't true).
+```
+// less
+@pesticide-debug: false;
+````
+```
+// stylus
+pesticide-debug = false
+````
 
 If you like to use vanilla css, you can either keep it commented out at the bottom of your css file,
 or include it as an extra request in the head of your html file like so...
@@ -33,20 +42,25 @@ Make sure not to send it to production though because that wouldn't be the best.
 # Development
 
 If you want to tweak the source code you might find it useful to use some of the available gulp tasks
-included with the project. To set up automation with gulp just press the following keys
+included with the project. To set up automation with gulp just press the following keys:
 ```
 cd pesticide
 npm install -g gulp
 npm install
-gulp
 ```
-
+Because Pesticide comes in Sass, Less, and Stylus flavors, you can adjust gulp to run with your pre-processor of choice. To do so, simply change the `preProcessor` variable at the top of the gulpfile to either sass, less or stylus as a string value. For example:
+```
+preProcessor = 'sass';
+```
+Then run `gulp`.
 That will set up:
 
 * Livereload
-* Sass compilation
+* Stylesheet compilation
 * Csslint
 * CSS minification
+
+*It's important to note that Sass is the default pre-processor set in the gulpfile, so if you plan to use Less or Stylus, you should change the `preProcessor` value before running `gulp`.*
 
 # Chrome Extension
 
