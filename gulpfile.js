@@ -1,25 +1,20 @@
 // Load plugins
 
-var gulp = require('gulp'),
-    gutil = require('gulp-util'),
-    watch = require('gulp-watch'),
-    lr    = require('tiny-lr'),
-    server = lr(),
-    livereload = require('gulp-livereload'),
-    prefix = require('gulp-autoprefixer'),
-    minifyCSS = require('gulp-minify-css'),
-    sass = require('gulp-ruby-sass'),
-    less = require('gulp-less'),
-    stylus = require('gulp-stylus'),
-    csslint = require('gulp-csslint'),
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
-    preProcessor = 'sass',
-    preProcessorExtensions = {
-      'sass': '.scss',
-      'less': '.less',
-      'stylus': '.stylus'
-    };
+var gulp         = require('gulp'),
+    gutil        = require('gulp-util'),
+    watch        = require('gulp-watch'),
+    lr           = require('tiny-lr'),
+    server       = lr(),
+    livereload   = require('gulp-livereload'),
+    prefix       = require('gulp-autoprefixer'),
+    minifyCSS    = require('gulp-minify-css'),
+    sass         = require('gulp-ruby-sass'),
+    less         = require('gulp-less'),
+    stylus       = require('gulp-stylus'),
+    csslint      = require('gulp-csslint'),
+    concat       = require('gulp-concat'),
+    uglify       = require('gulp-uglify'),
+    preProcessor = 'sass';
 
 
 // Task to minify all css files in the css directory
@@ -44,14 +39,13 @@ gulp.task('minify-js', function() {
 
 gulp.task('csslint', function(){
   gulp.src('./css/*.css')
-    .pipe(csslint({
-          'compatible-vendor-prefixes': false,
-          'box-sizing': false,
-          'important': false,
-          'known-properties': false
-        }))
-    .pipe(csslint.reporter());
-
+  .pipe(csslint({
+    'compatible-vendor-prefixes': false,
+    'box-sizing': false,
+    'important': false,
+    'known-properties': false
+  }))
+  .pipe(csslint.reporter());
 });
 
 
@@ -59,36 +53,36 @@ gulp.task('csslint', function(){
 
 gulp.task('sass', function(){
   gulp.src('./sass/*.scss')
-      .pipe(watch(function(files) {
-        return files.pipe(sass({loadPath: ['./sass/'], style: "compact"}))
-          .pipe(prefix())
-          .pipe(gulp.dest('./css/'))
-          .pipe(livereload(server));
-      }));
+  .pipe(watch(function(files) {
+    return files.pipe(sass({loadPath: ['./sass/'], style: "compact"}))
+    .pipe(prefix())
+    .pipe(gulp.dest('./css/'))
+    .pipe(livereload(server));
+  }));
 });
 
 // Task that compiles less files down to good old css
 
 gulp.task('less', function () {
-    gulp.src('./less/*.less')
-      .pipe(watch(function(files) {
-        return files.pipe(less())
-        .pipe(prefix())
-        .pipe(gulp.dest('./css/'))
-        .pipe(livereload(server));
-      }));
+  gulp.src('./less/*.less')
+  .pipe(watch(function(files) {
+    return files.pipe(less())
+    .pipe(prefix())
+    .pipe(gulp.dest('./css/'))
+    .pipe(livereload(server));
+  }));
 });
 
 // Task that compiles stylus files down to good old css
 
 gulp.task('stylus', function () {
-    gulp.src('./stylus/*.styl')
-      .pipe(watch(function(files) {
-        return files.pipe(stylus())
-        .pipe(prefix())
-        .pipe(gulp.dest('./css/'))
-        .pipe(livereload(server));
-      }));
+  gulp.src('./stylus/*.styl')
+  .pipe(watch(function(files) {
+    return files.pipe(stylus())
+    .pipe(prefix())
+    .pipe(gulp.dest('./css/'))
+    .pipe(livereload(server));
+  }));
 });
 
 
@@ -104,6 +98,11 @@ gulp.task('stylus', function () {
 */
 
 gulp.task('default', function(){
+  var preProcessorExtensions = {
+    'sass': '.scss',
+    'less': '.less',
+    'stylus': '.stylus'
+  };
   gulp.run(preProcessor, 'csslint');
   server.listen(35729, function (err) {
     gulp.watch(['*.html', './' + preProcessor + '/*' + preProcessorExtensions[preProcessor]], function(event) {
