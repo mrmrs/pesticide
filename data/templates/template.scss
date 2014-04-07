@@ -1,0 +1,9 @@
+/*
+    pesticide v0.1.0 . @mrmrs . MIT
+*/
+
+$pesticide-debug: true !default;
+
+@if $pesticide-debug == true {
+%s
+}
