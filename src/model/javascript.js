@@ -1,4 +1,5 @@
-module.exports.source = './data/templates/template.js';
-module.exports.target = './js/pesticide.js';
-module.exports.entry = '\t\t\t\'%s\': \'%s\'';
-
+module.exports = {
+  source: './data/templates/template.js',
+  target: './js/pesticide.js',
+  entry: '\t\t\t\'%s\': \'%s\''
+};
