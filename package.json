@@ -1,6 +1,6 @@
 {
   "name": "pesticide",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "Kill your css layout bugs without needing 2000 clicks in dev tools",
   "repository": {
     "type": "git",
