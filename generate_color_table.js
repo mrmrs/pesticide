@@ -1,6 +1,6 @@
 'use strict';
 
-var colors = require('./data/color_table.json'),
+var colors = require('./color_table.json'),
     less = require('./src/model/less'),
     scss = require('./src/model/scss'),
     stylus = require('./src/model/stylus'),
