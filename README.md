@@ -64,6 +64,17 @@ That will set up:
 
 *It's important to note that Sass is the default pre-processor set in the gulpfile, so if you plan to use Less or Stylus, you should change the `preProcessor` value before running `gulp`.*
 
+# Generating the color table
+
+The default color table is automatically generated and exported for the different pre-processors we support.
+To generate the color table simply run:
+
+`gulp generate`
+
+If you want to generate your own custom color table:
+
+`COLOR_TABLE=path/to/custom/table.json gulp generate`
+
 # Chrome Extension
 
 The source for the Pesticide Chrome extension is included beginning from v0.2. The extension is [available in the Chrome Webstore here.](https://chrome.google.com/webstore/detail/bblbgcheenepgnnajgfpiicnbbdmmooh).

@@ -7,7 +7,7 @@
     "url": "http://github.com/mrmrs/pesticide.git"
   },
   "devDependencies": {
-    "gulp": "~3.5.5",
+    "gulp": ">=3.6.0",
     "gulp-livereload": "~0.2.0",
     "tiny-lr": "0.0.5",
     "gulp-util": "~2.2.12",
@@ -19,7 +19,8 @@
     "gulp-concat": "^2.2.0",
     "gulp-uglify": "^0.2.1",
     "gulp-less": "~1.2.3",
-    "gulp-stylus": "~0.1.0"
+    "gulp-stylus": "~0.1.0",
+    "gulp-shell": "^0.2.4"
   },
   "author": {
     "name": "@mrmrs",

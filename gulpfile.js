@@ -14,8 +14,14 @@ var gulp         = require('gulp'),
     csslint      = require('gulp-csslint'),
     concat       = require('gulp-concat'),
     uglify       = require('gulp-uglify'),
+    shell        = require('gulp-shell'),
     preProcessor = 'sass';
 
+// Task to generate all source files with proper color table
+
+gulp.task('generate', shell.task([
+  'node ./generate_color_table.js'
+]));
 
 // Task to minify all css files in the css directory
 
