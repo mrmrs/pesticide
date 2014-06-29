@@ -12,7 +12,7 @@ clicking around in browser dev tools when trying to uncover what css is
 causing me problems.
 
 
-![Pesticide demo]https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Pesticide")
+![Pesticide demo](http://mrmrs.io/pesticide/img/demo2.gif "Pesticide")
 
 # Getting started
 
