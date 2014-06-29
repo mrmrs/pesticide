@@ -11,6 +11,9 @@ tell stuff apart. The pesticide toggle has proved much faster for me than
 clicking around in browser dev tools when trying to uncover what css is
 causing me problems.
 
+
+![Pesticide demo]https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Pesticide")
+
 # Getting started
 
 If you like pre-processing your css like I do, you can drop any of the Sass,
