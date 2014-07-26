@@ -3,9 +3,6 @@
 var gulp         = require('gulp'),
     gutil        = require('gulp-util'),
     watch        = require('gulp-watch'),
-    lr           = require('tiny-lr'),
-    server       = lr(),
-    livereload   = require('gulp-livereload'),
     prefix       = require('gulp-autoprefixer'),
     minifyCSS    = require('gulp-minify-css'),
     sass         = require('gulp-ruby-sass'),
@@ -15,6 +12,8 @@ var gulp         = require('gulp'),
     concat       = require('gulp-concat'),
     uglify       = require('gulp-uglify'),
     shell        = require('gulp-shell'),
+    rename       = require('gulp-rename'),
+    size         = require('gulp-size'),
     preProcessor = 'sass';
 
 // Task to generate all source files with proper color table
@@ -63,7 +62,6 @@ gulp.task('sass', function(){
     return files.pipe(sass({loadPath: ['./sass/'], style: "compact"}))
     .pipe(prefix())
     .pipe(gulp.dest('./css/'))
-    .pipe(livereload(server));
   }));
 });
 
@@ -75,7 +73,6 @@ gulp.task('less', function () {
     return files.pipe(less())
     .pipe(prefix())
     .pipe(gulp.dest('./css/'))
-    .pipe(livereload(server));
   }));
 });
 
@@ -87,7 +84,6 @@ gulp.task('stylus', function () {
     return files.pipe(stylus())
     .pipe(prefix())
     .pipe(gulp.dest('./css/'))
-    .pipe(livereload(server));
   }));
 });
 
@@ -110,9 +106,7 @@ gulp.task('default', function(){
     'stylus': '.stylus'
   };
   gulp.run(preProcessor, 'csslint');
-  server.listen(35729, function (err) {
     gulp.watch(['*.html', './' + preProcessor + '/*' + preProcessorExtensions[preProcessor]], function(event) {
       gulp.run(preProcessor, 'csslint');
     });
-  });
 });
