@@ -57,10 +57,10 @@ Because Pesticide comes in Sass, Less, and Stylus flavors, you can adjust gulp t
 ```
 preProcessor = 'sass';
 ```
-Then run `gulp`.
+Then run `npm start`.
 That will set up:
 
-* Livereload
+* Browser-sync (livereload changes in the browser)
 * Stylesheet compilation
 * Csslint
 * CSS minification
