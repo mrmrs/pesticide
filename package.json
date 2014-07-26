@@ -1,32 +1,41 @@
 {
   "name": "pesticide",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "Kill your css layout bugs without needing 2000 clicks in dev tools",
   "repository": {
     "type": "git",
     "url": "http://github.com/mrmrs/pesticide.git"
   },
   "devDependencies": {
+    "browser-sync": "^1.3.0",
     "gulp": ">=3.6.0",
-    "gulp-livereload": "~0.2.0",
-    "tiny-lr": "0.0.5",
-    "gulp-util": "~2.2.12",
-    "gulp-watch": "~0.5.0",
     "gulp-autoprefixer": "0.0.5",
-    "gulp-minify-css": "~0.2.0",
-    "gulp-ruby-sass": "~0.3.1",
-    "gulp-csslint": "~0.1.3",
     "gulp-concat": "^2.2.0",
-    "gulp-uglify": "^0.2.1",
+    "gulp-csslint": "~0.1.3",
     "gulp-less": "~1.2.3",
+    "gulp-minify-css": "~0.2.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-ruby-sass": "~0.3.1",
+    "gulp-shell": "^0.2.4",
+    "gulp-size": "^1.0.0",
     "gulp-stylus": "~0.1.0",
-    "gulp-shell": "^0.2.4"
+    "gulp-uglify": "^0.2.1",
+    "gulp-util": "~2.2.12",
+    "gulp-watch": "~0.5.0"
   },
   "author": {
     "name": "@mrmrs",
     "email": "hi@mrmrs.cc",
     "url": "http://mrmrs.cc"
   },
+  "contributors": [
+    { "name": "JC", "url": "http://colindres.me" },
+    { "name": "Paul Molluzzo", "url": "http://paul.molluzzo.com" },
+    { "name": "François Beaufort", "url": "https://github.com/beaufortfrancois" },
+    { "name": "David Hemphill", "url": "http://davidhemphill.com" },
+    { "name": "Chris Rebert", "url": "http://blog.rebertia.com" },
+    { "name": "kirkas", "url": "https://github.com/kirkas" }
+  ],
   "license": "MIT",
   "scripts": {
     "start": "gulp"
