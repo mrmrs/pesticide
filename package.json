@@ -1,7 +1,8 @@
 {
   "name": "pesticide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Kill your css layout bugs without needing 2000 clicks in dev tools",
+  "homepage": "http://pesticide.io",
   "repository": {
     "type": "git",
     "url": "http://github.com/mrmrs/pesticide.git"
