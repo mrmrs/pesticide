@@ -1,20 +1,22 @@
 // Load plugins
 
-var gulp         = require('gulp'),
-    gutil        = require('gulp-util'),
-    watch        = require('gulp-watch'),
-    prefix       = require('gulp-autoprefixer'),
-    minifyCSS    = require('gulp-minify-css'),
-    sass         = require('gulp-ruby-sass'),
-    less         = require('gulp-less'),
-    stylus       = require('gulp-stylus'),
-    csslint      = require('gulp-csslint'),
-    concat       = require('gulp-concat'),
-    uglify       = require('gulp-uglify'),
-    shell        = require('gulp-shell'),
-    rename       = require('gulp-rename'),
-    size         = require('gulp-size'),
-    preProcessor = 'sass';
+var gulp          = require('gulp'),
+    gutil         = require('gulp-util'),
+    watch         = require('gulp-watch'),
+    prefix        = require('gulp-autoprefixer'),
+    minifyCSS     = require('gulp-minify-css'),
+    sass          = require('gulp-sass'),
+    less          = require('gulp-less'),
+    stylus        = require('gulp-stylus'),
+    csslint       = require('gulp-csslint'),
+    concat        = require('gulp-concat'),
+    uglify        = require('gulp-uglify'),
+    shell         = require('gulp-shell'),
+    rename        = require('gulp-rename'),
+    size          = require('gulp-size'),
+    browserSync   = require('browser-sync'),
+    browserReload = browserSync.reload,
+    preProcessor  = 'sass';
 
 // Task to generate all source files with proper color table
 
@@ -25,8 +27,10 @@ gulp.task('generate', shell.task([
 // Task to minify all css files in the css directory
 
 gulp.task('minify-css', function(){
-  gulp.src('./css/*.css')
-    .pipe(minifyCSS({keepSpecialComments: 0}))
+  gulp.src('./css/pesticide.css')
+    .pipe(minifyCSS())
+    .pipe(size({gzip: true, showFiles: true, title:'minified css'}))
+    .pipe(rename('pesticide.min.css'))
     .pipe(gulp.dest('./css/'));
 });
 
@@ -53,14 +57,31 @@ gulp.task('csslint', function(){
   .pipe(csslint.reporter());
 });
 
+// Initialize browser-sync which starts a static server also allows for 
+// browsers to reload on filesave
+gulp.task('browser-sync', function() {
+    browserSync.init(null, {
+        server: {
+            baseDir: "./"
+        }
+    });
+});
+
+// Function to call for reloading browsers
+gulp.task('bs-reload', function () {
+    browserSync.reload();
+});
+
 
 // Task that compiles scss files down to good old css
 
 gulp.task('sass', function(){
   gulp.src('./sass/*.scss')
   .pipe(watch(function(files) {
-    return files.pipe(sass({loadPath: ['./sass/'], style: "compact"}))
+    return files.pipe(sass())
     .pipe(prefix())
+    .pipe(size({gzip: false, showFiles: true, title:'unminified css'}))
+    .pipe(size({gzip: true, showFiles: true, title:'unminified css'}))
     .pipe(gulp.dest('./css/'))
   }));
 });
@@ -72,6 +93,8 @@ gulp.task('less', function () {
   .pipe(watch(function(files) {
     return files.pipe(less())
     .pipe(prefix())
+    .pipe(size({gzip: false, showFiles: true, title:'unminified css'}))
+    .pipe(size({gzip: true, showFiles: true, title:'unminified css'}))
     .pipe(gulp.dest('./css/'))
   }));
 });
@@ -83,6 +106,8 @@ gulp.task('stylus', function () {
   .pipe(watch(function(files) {
     return files.pipe(stylus())
     .pipe(prefix())
+    .pipe(size({gzip: false, showFiles: true, title:'unminified css'}))
+    .pipe(size({gzip: true, showFiles: true, title:'unminified css'}))
     .pipe(gulp.dest('./css/'))
   }));
 });
@@ -107,6 +132,6 @@ gulp.task('default', function(){
   };
   gulp.run(preProcessor, 'csslint');
     gulp.watch(['*.html', './' + preProcessor + '/*' + preProcessorExtensions[preProcessor]], function(event) {
-      gulp.run(preProcessor, 'csslint');
+      gulp.run(preProcessor, 'csslint', 'bs-reload');
     });
 });
