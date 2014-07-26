@@ -27,5 +27,8 @@
     "email": "hi@mrmrs.cc",
     "url": "http://mrmrs.cc"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "gulp"
+  }
 }
