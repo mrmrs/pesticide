@@ -1,6 +1,6 @@
 {
   "name": "pesticide",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Kill your css layout bugs without needing 2000 clicks in dev tools",
   "homepage": "http://pesticide.io",
   "repository": {
@@ -30,6 +30,10 @@
     "url": "http://mrmrs.cc"
   },
   "contributors": [
+    {
+      "name": "Rafael Rinaldi",
+      "url": "https://github.com/rafaelrinaldi"
+    },
     {
       "name": "JC",
       "url": "http://colindres.me"
