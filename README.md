@@ -1,14 +1,14 @@
 # Pesticide
 
-Kill your css layout bugs.  *Without* 2000 clicks in chrome dev tools.
+Kill your CSS layout bugs.  *Without* 2000 clicks in Chrome Dev Tools.
 
 ## WTF is this?
 
-Sometimes if I am trying to sleuth a layout problem in css, all I want is every
+Sometimes if I am trying to sleuth a layout problem in CSS, all I want is every
 single element on the page to show me where its outline is.  And I want all the
 outline colors to be different per element because, well sometimes I need to
 tell stuff apart. The pesticide toggle has proved much faster for me than
-clicking around in browser dev tools when trying to uncover what css is
+clicking around in browser dev tools when trying to uncover what CSS is
 causing me problems.
 
 
@@ -16,7 +16,7 @@ causing me problems.
 
 # Getting started
 
-If you like pre-processing your css like I do, you can drop any of the Sass,
+If you like pre-processing your CSS like I do, you can drop any of the Sass,
 Less, or Stylus partials into your includes.  Each version of Pesticide sets a
 debug variable at the top of the partial, which you can set to false if you
 want to turn off outlines:
@@ -33,8 +33,8 @@ $pesticide-debug: false;
 pesticide-debug = false
 ````
 
-If you like to use vanilla css, you can either keep it commented out at the
-bottom of your css file, or include it as an extra request in the head of your
+If you like to use vanilla CSS, you can either keep it commented out at the
+bottom of your CSS file, or include it as an extra request in the head of your
 html file like so...
 ```
 <link rel="stylesheet" href="pesticide.css">
@@ -62,7 +62,7 @@ That will set up:
 
 * Browser-sync (livereload changes in the browser)
 * Stylesheet compilation
-* Csslint
+* CSSLint
 * CSS minification
 
 *It's important to note that Sass is the default pre-processor set in the gulpfile, so if you plan to use Less or Stylus, you should change the `preProcessor` value before running `gulp`.*
@@ -80,7 +80,7 @@ If you want to generate your own custom color table:
 
 # Chrome Extension
 
-The source for the Pesticide Chrome extension is included beginning from v0.2. The extension is [available in the Chrome Webstore here.](https://chrome.google.com/webstore/detail/bblbgcheenepgnnajgfpiicnbbdmmooh).
+The source for the Pesticide Chrome extension is included beginning from v0.2. The extension is [available in the Chrome Web Store here](https://chrome.google.com/webstore/detail/bblbgcheenepgnnajgfpiicnbbdmmooh).
 
 If you make changes to the extension within this repo and want it pushed up to Chrome, report an issue and mention @paulmolluzzo to make sure I get an email about it.
 
