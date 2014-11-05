@@ -84,6 +84,10 @@ The source for the Pesticide Chrome extension is included beginning from v0.2. T
 
 If you make changes to the extension within this repo and want it pushed up to Chrome, report an issue and mention @paulmolluzzo to make sure I get an email about it.
 
+# Firefox Add-on
+
+Pesticide is also available as a [Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/pesticide/)
+
 # Author
 
 [MRMRS](http://mrmrs.cc "Adam Morse - Designer Developer")
