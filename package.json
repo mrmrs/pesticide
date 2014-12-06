@@ -2,25 +2,31 @@
   "name": "pesticide",
   "version": "0.1.0",
   "description": "Kill your css layout bugs without needing 2000 clicks in dev tools",
-  "repository" : {
-    "type" : "git" ,
-    "url" : "http://github.com/mrmrs/pesticide.git"
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/mrmrs/pesticide.git"
   },
   "devDependencies": {
     "gulp": "~3.5.5",
+    "gulp-autoprefixer": "0.0.5",
+    "gulp-csslint": "~0.1.3",
     "gulp-livereload": "~0.2.0",
-    "tiny-lr": "0.0.5",
+    "gulp-minify-css": "~0.2.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-ruby-sass": "~0.3.1",
+    "gulp-uncss": "^0.5.1",
     "gulp-util": "~2.2.12",
     "gulp-watch": "~0.5.0",
-    "gulp-autoprefixer": "0.0.5",
-    "gulp-minify-css": "~0.2.0",
-    "gulp-ruby-sass": "~0.3.1",
-    "gulp-csslint": "~0.1.3"
+    "tiny-lr": "0.0.5"
   },
   "author": {
-    "name" : "@mrmrs",
-    "email" : "hi@mrmrs.cc",
-    "url" : "http://mrmrs.cc"
-   },
+    "name": "@mrmrs",
+    "email": "hi@mrmrs.cc",
+    "url": "http://mrmrs.cc"
+  },
+  "scripts": {
+    "start": "gulp",
+    "uncss": "gulp minify-css"
+  },
   "license": "MIT"
 }

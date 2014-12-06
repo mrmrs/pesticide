@@ -3,21 +3,28 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     watch = require('gulp-watch'),
-    lr    = require('tiny-lr'),
-    server = lr(),
-    livereload = require('gulp-livereload'),
     prefix = require('gulp-autoprefixer'),
     minifyCSS = require('gulp-minify-css'),
     sass = require('gulp-ruby-sass'),
+    size = require('gulp-size'),
+    rename = require('gulp-rename'),
+    uncss = require('gulp-uncss'),
     csslint = require('gulp-csslint');
 
 
 // Task to minify all css files in the css directory
 
 gulp.task('minify-css', function(){
-  gulp.src('./css/*.css')
-    .pipe(minifyCSS({keepSpecialComments: 0}))
-    .pipe(gulp.dest('./css/'));
+  gulp.src('./css/i.css')
+    .pipe(uncss({
+      html: ['index.html'],
+      ignore: [':hover', ':focus', ':visited', ':link', ':active']
+    }))
+    .pipe(minifyCSS())
+    .pipe(rename('i.min.css'))
+    .pipe(gulp.dest('./css/'))
+    .pipe(size({gzip: false, showFiles: true, title:'minified css'}))
+    .pipe(size({gzip: true, showFiles: true, title:'minified css'}));
 });
 
 
