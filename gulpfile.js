@@ -57,7 +57,7 @@ gulp.task('csslint', function(){
   .pipe(csslint.reporter());
 });
 
-// Initialize browser-sync which starts a static server also allows for 
+// Initialize browser-sync which starts a static server also allows for
 // browsers to reload on filesave
 gulp.task('browser-sync', function() {
     browserSync.init(null, {
@@ -76,7 +76,7 @@ gulp.task('bs-reload', function () {
 // Task that compiles scss files down to good old css
 
 gulp.task('sass', function(){
-  gulp.src('./sass/*.scss')
+  gulp.src('./sass/pesticide.scss')
   .pipe(watch(function(files) {
     return files.pipe(sass())
     .pipe(prefix())
@@ -89,7 +89,7 @@ gulp.task('sass', function(){
 // Task that compiles less files down to good old css
 
 gulp.task('less', function () {
-  gulp.src('./less/*.less')
+  gulp.src('./less/pesticide.less')
   .pipe(watch(function(files) {
     return files.pipe(less())
     .pipe(prefix())
