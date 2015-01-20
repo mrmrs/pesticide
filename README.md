@@ -92,6 +92,10 @@ Pesticide is also available as a [Firefox Add-on](https://addons.mozilla.org/en-
 
 [MRMRS](http://mrmrs.cc "Adam Morse - Designer Developer")
 
+# Contributors
+
+[Zach Reed](https://twitter.com/bluetidepro "Zach Reed - Front-End Designer/Developer")
+
 # License
 
 The MIT License (MIT)

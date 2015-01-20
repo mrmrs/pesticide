@@ -16,8 +16,11 @@
   },
 
   "browser_action": {
-    "default_icon": "icon_16.png",
-    "default_title": "Toggle Pesticide"
+    "default_title": "Toggle Pesticide",
+    "default_icon": {
+      "19": "images/toolbar-chrome.png",
+      "38": "images/toolbar-chrome@2x.png"
+    }
   },
 
   "icons": {
