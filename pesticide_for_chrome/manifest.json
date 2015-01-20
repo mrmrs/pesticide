@@ -4,7 +4,7 @@
   "name": "Pesticide for Chrome",
   "short_name": "Pesticide",
   "description": "This extension inserts the Pesticide CSS into the current page, outlining each element to better see placement on the page.",
-  "version": "0.2",
+  "version": "0.3",
 
   "permissions": [
       "activeTab"
