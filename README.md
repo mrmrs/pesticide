@@ -94,17 +94,19 @@ Pesticide is also available as a [Firefox Add-on](https://addons.mozilla.org/en-
 
 # Contributors
 
-[Rafael Rinaldi](https://github.com/rafaelrinaldi "Rafael Rinaldi")
-[Paul Molluzzo](https://github.com/paulmolluzzo)
-[JC](https://github.com/colindresj)
-[Chris Rebert](https://github.com/cvrebert)
-[François Beaufort](https://github.com/beaufortfrancois)
-[Zach Reed](https://twitter.com/bluetidepro "Zach Reed - Front-End Designer/Developer")
-[Chris Van](https://github.com/cvan)
-[Jitendra Joshi](https://github.com/joshijitendra)
-[David Hemphill](https://github.com/davidhemphill)
-[kirkas](https://github.com/kirkas)
-[mrmrs](http://mrmrs.io)
+Built and iterated by the following nice people
+
+* [Rafael Rinaldi](https://github.com/rafaelrinaldi "Rafael Rinaldi")
+* [Paul Molluzzo](https://github.com/paulmolluzzo)
+* [JC](https://github.com/colindresj)
+* [Chris Rebert](https://github.com/cvrebert)
+* [François Beaufort](https://github.com/beaufortfrancois)
+* [Zach Reed](https://twitter.com/bluetidepro "Zach Reed - Front-End Designer/Developer")
+* [Chris Van](https://github.com/cvan)
+* [Jitendra Joshi](https://github.com/joshijitendra)
+* [David Hemphill](https://github.com/davidhemphill)
+* [kirkas](https://github.com/kirkas)
+* [mrmrs](http://mrmrs.io)
 
 # License
 
