@@ -198,4 +198,8 @@ br
   outline: 1px solid #db687d !important;
 wbr
   outline: 1px solid #db175b !important;
+:before
+  outline: 1px solid #2980b9 !important;
+:after
+  outline: 1px solid #2980b9 !important;
 }
