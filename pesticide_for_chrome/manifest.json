@@ -7,7 +7,16 @@
   "version": "0.3",
 
   "permissions": [
-      "activeTab"
+      "activeTab",
+      "tabs"
+  ],
+
+  "content_scripts": [
+      {
+          "matches": ["*://*/*"],
+          "js": ["pesticide_page.js"],
+          "run_at": "document_end"
+      }
   ],
 
   "background": {
