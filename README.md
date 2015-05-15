@@ -52,6 +52,20 @@ That will set up:
 
 [MRMRS](http://mrmrs.cc "Adam Morse - Designer Developer")
 
+# Contributors  
+
+Rafael Rinaldi  
+Jorge Colindres  
+Zach Reed  
+Paul Molluzzo  
+Léo Galley
+David Hemphill  
+Jitendra Joshi  
+Chris Van  
+Chris Rebert  
+François Beaufort  
+Amira Hailemariam
+
 # License
 
 The MIT License (MIT)
