@@ -20,43 +20,50 @@ If you like pre-processing your CSS like I do, you can drop any of the Sass,
 Less, or Stylus partials into your includes.  Each version of Pesticide sets a
 debug variable at the top of the partial, which you can set to false if you
 want to turn off outlines:
-```
+
+```sass
 // sass
 $pesticide-debug: false;
 ```
-```
+
+```less
 // less
 @pesticide-debug: false;
 ````
-```
+
+```stylus
 // stylus
 pesticide-debug = false
 ````
 
 If you like to use vanilla CSS, you can either keep it commented out at the
 bottom of your CSS file, or include it as an extra request in the head of your
-html file like so...
-```
+HTML file like so...
+
+```html
 <link rel="stylesheet" href="pesticide.css">
 ```
+
 Make sure not to send it to production though because that wouldn't be the best.
 
-*Enjoy. And feel free to make the color scheme more pretty and send a pull request :)*
+*Enjoy. And feel free to make the color scheme prettier and send a pull request :)*
 
 # Development
 
 If you want to tweak the source code you might find it useful to use some of
 the available gulp tasks included with the project. To set up automation with
 gulp just press the following keys:
-```
+```shell
 cd pesticide
 npm install -g gulp
 npm install
 ```
 Because Pesticide comes in Sass, Less, and Stylus flavors, you can adjust gulp to run with your pre-processor of choice. To do so, simply change the `preProcessor` variable at the top of the gulpfile to either sass, less or stylus as a string value. For example:
-```
+
+```js
 preProcessor = 'sass';
 ```
+
 Then run `npm start`.
 That will set up:
 
@@ -72,11 +79,15 @@ That will set up:
 The default color table is automatically generated and exported for the different pre-processors we support.
 To generate the color table simply run:
 
-`gulp generate`
+```
+gulp generate
+```
 
 If you want to generate your own custom color table:
 
-`COLOR_TABLE=path/to/custom/table.json gulp generate`
+```
+COLOR_TABLE=path/to/custom/table.json gulp generate
+```
 
 # Chrome Extension
 
