@@ -64,6 +64,7 @@
     "start": "gulp",
     "sass": "gulp sass",
     "stylus": "gulp stylus",
-    "less": "gulp less"
+    "less": "gulp less",
+    "minify": "gulp minify-css"
   }
 }
