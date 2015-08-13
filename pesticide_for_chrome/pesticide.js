@@ -1,8 +1,28 @@
-// Called when the user clicks on the browser action.
+function init() {
+  var resultBanner = document.getElementById('pesticide-for-chrome-result');
 
-chrome.browserAction.onClicked.addListener(function(tab) {
+  resultBanner.innerHTML = '<p>Ready to kill some bugs!</p>';
+}
 
-    chrome.tabs.executeScript({
-        code: 'var pesticideLink; (document.getElementById("pesticide") == null) ? (pesticideLink = document.createElement("link"), pesticideLink.href = chrome.extension.getURL("/pesticide.min.css"), pesticideLink.id = "pesticide", pesticideLink.type = "text/css", pesticideLink.rel = "stylesheet",document.getElementsByTagName("head")[0].appendChild(pesticideLink)) : (document.getElementsByTagName("head")[0].removeChild(document.getElementById("pesticide")))'
-    });
-});
+// updates the info banner at the bottom of the page
+function updateBanner(event) {
+  var resultBanner = document.getElementById('pesticide-for-chrome-result');
+  var id = event.target.id.toString() || '';
+  var classList = event.target.classList.toString() || '';
+  var node = event.target.nodeName.toLowerCase() || '';
+
+  if (!!!resultBanner)
+    return false;
+
+  // combine the node name, classes, and id into a string in the banner
+  var resultContent = '<p>You\'re hovering on = { ';
+  resultContent += 'node: <b> ' + node + '</b>; ';
+  resultContent += 'classes: <b> ' + classList + '</b>; ';
+  resultContent += 'id: <b> ' + id + '</b>;';
+  resultContent +=  ' }</p>';
+
+  resultBanner.innerHTML = resultContent;
+}
+
+init();
+document.addEventListener('mouseover', updateBanner, false);
