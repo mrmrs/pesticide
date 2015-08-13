@@ -19,7 +19,7 @@ function updateBanner(event) {
   resultContent += 'node: <b> ' + node + '</b>; ';
   resultContent += 'classes: <b> ' + classList + '</b>; ';
   resultContent += 'id: <b> ' + id + '</b>;';
-  resultContent +=  '</p>';
+  resultContent +=  ' }</p>';
 
   resultBanner.innerHTML = resultContent;
 }
