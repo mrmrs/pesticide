@@ -102,6 +102,10 @@ If you make changes to the extension within this repo and want it pushed up to C
 
 Pesticide is also available as a [Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/pesticide/)
 
+# Safari Extension
+
+Or you can download a [Safari Extension](http://pesticide.molluzzo.com/pesticide_for_safari.safariextz)
+
 # Author
 
 [MRMRS](http://mrmrs.cc "Adam Morse - Designer Developer")
