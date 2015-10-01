@@ -18,22 +18,25 @@ causing me problems.
 
 If you like pre-processing your CSS like I do, you can drop any of the Sass,
 Less, or Stylus partials into your includes.  Each version of Pesticide sets a
-debug variable at the top of the partial, which you can set to false if you
-want to turn off outlines:
+pair of debug variables at the top of the partial, which you can set to false if
+you want to turn off outlines and depths (i.e., shadows) respectively:
 
 ```sass
 // sass
-$pesticide-debug: false;
+$pesticide-debug-outline: false;
+$pesticide-debug-depth: false;
 ```
 
 ```less
 // less
-@pesticide-debug: false;
+@pesticide-debug-outline: false;
+@pesticide-debug-depth: false;
 ````
 
 ```stylus
 // stylus
-pesticide-debug = false
+pesticide-debug-outline = false
+@pesticide-debug-depth = false
 ````
 
 If you like to use vanilla CSS, you can either keep it commented out at the
