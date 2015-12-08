@@ -1,12 +1,11 @@
+var resultBanner = document.getElementById('pesticide-for-chrome-result');
 function init() {
-  var resultBanner = document.getElementById('pesticide-for-chrome-result');
-
   resultBanner.innerHTML = '<p>Ready to kill some bugs!</p>';
 }
 
 // updates the info banner at the bottom of the page
 function updateBanner(event) {
-  var resultBanner = document.getElementById('pesticide-for-chrome-result');
+  showBanner(event);
   var id = event.target.id.toString() || '';
   var classList = event.target.classList.toString() || '';
   var node = event.target.nodeName.toLowerCase() || '';
@@ -24,5 +23,14 @@ function updateBanner(event) {
   resultBanner.innerHTML = resultContent;
 }
 
+// toggles the visibility of the banner
+function showBanner(event) {
+  resultBanner.className = '';
+  if (event.ctrlKey)
+    resultBanner.className = 'show';
+}
+
 init();
 document.addEventListener('mouseover', updateBanner, false);
+window.addEventListener('keydown', showBanner, false);
+window.addEventListener('keyup', showBanner, false);
