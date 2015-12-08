@@ -5,7 +5,6 @@ function init() {
 
 // updates the info banner at the bottom of the page
 function updateBanner(event) {
-  showBanner(event);
   var id = event.target.id.toString() || '';
   var classList = event.target.classList.toString() || '';
   var node = event.target.nodeName.toLowerCase() || '';
