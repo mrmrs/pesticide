@@ -17,7 +17,13 @@
     "gulp-uncss": "^0.5.1",
     "gulp-util": "~2.2.12",
     "gulp-watch": "~0.5.0",
-    "tiny-lr": "0.0.5"
+    "tiny-lr": "0.0.5",
+    "copy-files": "^0.1.0",
+    "immutable-css-cli": "^1.1.1",
+    "normalize.css": "^4.2.0",
+    "tachyons-cli": "^1.0.4",
+    "tachyons-modules": "^1.1.8",
+    "watch": "^0.19.2"
   },
   "author": {
     "name": "@mrmrs",
@@ -26,7 +32,11 @@
   },
   "scripts": {
     "start": "gulp",
-    "uncss": "gulp minify-css"
+    "uncss": "gulp minify-css",
+    "build": "npm run build:css && npm run build:minify",
+    "build:css": "tachyons src/tachyons.css > css/tachyons.css",
+    "build:minify": "tachyons src/tachyons.css -m > css/tachyons.min.css",
+    "build:watch": "watch 'npm run build' ./src/"
   },
   "license": "MIT"
 }

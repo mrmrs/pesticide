@@ -1,0 +1,64 @@
+
+<div class="dn">
+        The cascade part of cascading style sheets can be tricky.
+        Placing an outline on every element can help
+        you figure out what the fuck is going on.
+        <br>This little css module does exactly just that.
+        Nothing more, nothing less.
+Pesticide can be used a variety of ways
+<a href="https://github.com/mrmrs/pesticide/zipball/master">&nbsp; Download &nbsp; </a>
+<a class="no-outline button mbs" href="https://chrome.google.com/webstore/detail/pesticide-for-chrome/bblbgcheenepgnnajgfpiicnbbdmmooh?hl=en-US">&nbsp; Install on Chrome &nbsp; </a>
+
+Alternatively you can add the uncompressed or compressed css to your page for
+instant debugging.
+
+<code class="no-outline" style="font-size: 14px;white-space:nowrap;">
+&lt;link href="https://s3-us-west-2.amazonaws.com/pesticide/1.2.0/pesticide.css"&gt;</code>
+<code class="no-outline purple" style="font-size: 14px;white-space:nowrap;">
+&lt;link href="https://s3-us-west-2.amazonaws.com/pesticide/1.2.0/pesticide.min.css"&gt;</code>
+
+      <h3>Using the Chrome and Safari Extensions</h3>
+      <p>
+        Toggle outlines on any website with this handy <a href="https://chrome.google.com/webstore/detail/pesticide-for-chrome/bblbgcheenepgnnajgfpiicnbbdmmooh?hl=en-US" title="Pesticide for Chrome"> chrome extension</a>
+Or this handy
+
+The only drawback is the outlines don't persist on page refresh. If that is your desire - it is recommended that you install it locally as described below.
+      </p>
+<img src="img/demo2.gif" class="no-outline mbx" style="width: 100%;display: block;"  >
+
+      <h3 class="no-outline mtm">Local Development</h3>
+      <p class="no-outline mbn">
+        Download <a href="https://raw.github.com/mrmrs/pesticide/master/css/pesticide.css" class="link purple">&nbsp;the css file here&nbsp;</a>  &nbsp;and include it in your html document like so
+      </p>
+<pre class="no-outline" style="overflow-x:auto;">
+<code class="no-outline purple f6" style="white-space:nowrap;">
+&lt;link rel="stylesheet" href="css/pesticide.css"&gt;
+</code>
+</pre>
+
+    Adding a file to the head of your html document can kind of be a pain if
+you are toggling it on and off.
+  You can add pesticide as a sass partial and it will only render out if you
+set
+<pre class="no-outline"><code class="no-outline purple lh-copy">
+$pesticide-debug: true;
+@import "pesticide";
+  </code></pre>
+  <p>
+<footer>
+
+  <a href="https://twitter.com/intent/tweet?text=Pesticide: Faster css layout debugging made easy.&url=http://pesticide.io&via=mrmrs%5f " target="_blank" class="">
+    <svg class="geomicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="currentColor">
+      <path d="M2 4 C6 8 10 12 15 11 A6 6 0 0 1 22 4 A6 6 0 0 1 26 6 A8 8 0 0 0 31 4 A8 8 0 0 1 28 8 A8 8 0 0 0 32 7 A8 8 0 0 1 28 11 A18 18 0 0 1 10 30 A18 18 0 0 1 0 27 A12 12 0 0 0 8 24 A8 8 0 0 1 3 20 A8 8 0 0 0 6 19.5 A8 8 0 0 1 0 12 A8 8 0 0 0 3 13 A8 8 0 0 1 2 4"/>
+    </svg>
+    Tweet this
+  </a>
+      <a href="https://twitter.com/intent/tweet?text=Pesticide: Faster css layout debugging made easy.&url=http://pesticide.io&via=mrmrs%5f " target="_blank" class="link dib mt4 dim ba bw2 blue pv2 ph3 twitter">
+        <svg class="geomicon no-outline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="currentColor" style="margin-right: .25em;">
+          <path d="M2 4 C6 8 10 12 15 11 A6 6 0 0 1 22 4 A6 6 0 0 1 26 6 A8 8 0 0 0 31 4 A8 8 0 0 1 28 8 A8 8 0 0 0 32 7 A8 8 0 0 1 28 11 A18 18 0 0 1 10 30 A18 18 0 0 1 0 27 A12 12 0 0 0 8 24 A8 8 0 0 1 3 20 A8 8 0 0 0 6 19.5 A8 8 0 0 1 0 12 A8 8 0 0 0 3 13 A8 8 0 0 1 2 4"/>
+        </svg>
+        Tweet
+      </a>
+
+</footer>
+</div>

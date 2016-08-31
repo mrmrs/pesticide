@@ -1,0 +1,179 @@
+/*
+
+  STYLES
+
+  Add custom styles here.
+
+*/
+
+.pesticide body { outline: 1px solid #2980b9 !important; }
+.pesticide article { outline: 1px solid #3498db !important; }
+.pesticide nav { outline: 1px solid #0088c3 !important; }
+.pesticide aside { outline: 1px solid #33a0ce !important; }
+.pesticide section { outline: 1px solid #66b8da !important; }
+.pesticide header { outline: 1px solid #99cfe7 !important; }
+.pesticide footer { outline: 1px solid #cce7f3 !important; }
+.pesticide h1 { outline: 1px solid #162544 !important; }
+.pesticide h2 { outline: 1px solid #314e6e !important; }
+.pesticide h3 { outline: 1px solid #3e5e85 !important; }
+.pesticide h4 { outline: 1px solid #449baf !important; }
+.pesticide h5 { outline: 1px solid #c7d1cb !important; }
+.pesticide h6 { outline: 1px solid #4371d0 !important; }
+.pesticide main { outline: 1px solid #2f4f90 !important; }
+.pesticide address { outline: 1px solid #1a2c51 !important; }
+.pesticide div { outline: 1px solid #036cdb !important; }
+.pesticide p { outline: 1px solid #ac050b !important; }
+.pesticide hr { outline: 1px solid #ff063f !important; }
+.pesticide pre { outline: 1px solid #850440 !important; }
+.pesticide blockquote { outline: 1px solid #f1b8e7 !important; }
+.pesticide ol { outline: 1px solid #ff050c !important; }
+.pesticide ul { outline: 1px solid #d90416 !important; }
+.pesticide li { outline: 1px solid #d90416 !important; }
+.pesticide dl { outline: 1px solid #fd3427 !important; }
+.pesticide dt { outline: 1px solid #ff0043 !important; }
+.pesticide dd { outline: 1px solid #e80174 !important; }
+.pesticide figure { outline: 1px solid #ff00bb !important; }
+.pesticide figcaption { outline: 1px solid #bf0032 !important; }
+.pesticide table { outline: 1px solid #00cc99 !important; }
+.pesticide caption { outline: 1px solid #37ffc4 !important; }
+.pesticide thead { outline: 1px solid #98daca !important; }
+.pesticide tbody { outline: 1px solid #64a7a0 !important; }
+.pesticide tfoot { outline: 1px solid #22746b !important; }
+.pesticide tr { outline: 1px solid #86c0b2 !important; }
+.pesticide th { outline: 1px solid #a1e7d6 !important; }
+.pesticide td { outline: 1px solid #3f5a54 !important; }
+.pesticide col { outline: 1px solid #6c9a8f !important; }
+.pesticide colgroup { outline: 1px solid #6c9a9d !important; }
+.pesticide button { outline: 1px solid #da8301 !important; }
+.pesticide datalist { outline: 1px solid #c06000 !important; }
+.pesticide fieldset { outline: 1px solid #d95100 !important; }
+.pesticide form { outline: 1px solid #d23600 !important; }
+.pesticide input { outline: 1px solid #fca600 !important; }
+.pesticide keygen { outline: 1px solid #b31e00 !important; }
+.pesticide label { outline: 1px solid #ee8900 !important; }
+.pesticide legend { outline: 1px solid #de6d00 !important; }
+.pesticide meter { outline: 1px solid #e8630c !important; }
+.pesticide optgroup { outline: 1px solid #b33600 !important; }
+.pesticide option { outline: 1px solid #ff8a00 !important; }
+.pesticide output { outline: 1px solid #ff9619 !important; }
+.pesticide progress { outline: 1px solid #e57c00 !important; }
+.pesticide select { outline: 1px solid #e26e0f !important; }
+.pesticide textarea { outline: 1px solid #cc5400 !important; }
+.pesticide details { outline: 1px solid #33848f !important; }
+.pesticide summary { outline: 1px solid #60a1a6 !important; }
+.pesticide command { outline: 1px solid #438da1 !important; }
+.pesticide menu { outline: 1px solid #449da6 !important; }
+.pesticide del { outline: 1px solid #bf0000 !important; }
+.pesticide ins { outline: 1px solid #400000 !important; }
+.pesticide img { outline: 1px solid #22746b !important; }
+.pesticide iframe { outline: 1px solid #64a7a0 !important; }
+.pesticide embed { outline: 1px solid #98daca !important; }
+.pesticide object { outline: 1px solid #00cc99 !important; }
+.pesticide param { outline: 1px solid #37ffc4 !important; }
+.pesticide video { outline: 1px solid #6ee866 !important; }
+.pesticide audio { outline: 1px solid #027353 !important; }
+.pesticide source { outline: 1px solid #012426 !important; }
+.pesticide canvas { outline: 1px solid #a2f570 !important; }
+.pesticide track { outline: 1px solid #59a600 !important; }
+.pesticide map { outline: 1px solid #7be500 !important; }
+.pesticide area { outline: 1px solid #305900 !important; }
+.pesticide a { outline: 1px solid #ff62ab !important; }
+.pesticide em { outline: 1px solid #800b41 !important; }
+.pesticide strong { outline: 1px solid #ff1583 !important; }
+.pesticide i { outline: 1px solid #803156 !important; }
+.pesticide b { outline: 1px solid #cc1169 !important; }
+.pesticide u { outline: 1px solid #ff0430 !important; }
+.pesticide s { outline: 1px solid #f805e3 !important; }
+.pesticide small { outline: 1px solid #d107b2 !important; }
+.pesticide abbr { outline: 1px solid #4a0263 !important; }
+.pesticide q { outline: 1px solid #240018 !important; }
+.pesticide cite { outline: 1px solid #64003c !important; }
+.pesticide dfn { outline: 1px solid #b4005a !important; }
+.pesticide sub { outline: 1px solid #dba0c8 !important; }
+.pesticide sup { outline: 1px solid #cc0256 !important; }
+.pesticide time { outline: 1px solid #d6606d !important; }
+.pesticide code { outline: 1px solid #e04251 !important; }
+.pesticide kbd { outline: 1px solid #5e001f !important; }
+.pesticide samp { outline: 1px solid #9c0033 !important; }
+.pesticide var { outline: 1px solid #d90047 !important; }
+.pesticide mark { outline: 1px solid #ff0053 !important; }
+.pesticide bdi { outline: 1px solid #bf3668 !important; }
+.pesticide bdo { outline: 1px solid #6f1400 !important; }
+.pesticide ruby { outline: 1px solid #ff7b93 !important; }
+.pesticide rt { outline: 1px solid #ff2f54 !important; }
+.pesticide rp { outline: 1px solid #803e49 !important; }
+.pesticide span { outline: 1px solid #cc2643 !important; }
+.pesticide br { outline: 1px solid #db687d !important; }
+.pesticide wbr { outline: 1px solid #db175b !important; }
+
+
+.carbonad {
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 13px;
+  max-width: 20rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(0,0,0,.1);
+  }
+
+.carbonad a:link {
+  color: #444; }
+
+.carbonad a:visited {
+  color: #444; }
+
+.carbonad .carbon-wrap {
+  display: block;
+  overflow: hidden; }
+
+.carbonad .carbon-wrap .carbon-img {
+  float: left;
+  margin-right: 1rem; }
+
+.carbonad .carbon-wrap .carbon-text {
+  float: none;
+  overflow: hidden;
+  display: block;
+  font-size: 13px; }
+
+.carbonad .carbon-poweredby:link {
+  color: rgba(0, 0, 0, 0.75); }
+
+.carbonad .carbon-poweredby:visited {
+  color: rgba(0, 0, 0, 0.75); }
+
+/* CUBE */
+  #spinner .face {
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    text-align: center;
+    line-height: 128px;
+    font-size: 16px;
+  }
+
+  #spinner .face1 { -webkit-transform: translateZ(64px);                                }
+  #spinner .face2 { -webkit-transform: rotateY(90deg) translateZ(64px);                 }
+  #spinner .face3 { -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(64px);  }
+  #spinner .face4 { -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(64px); }
+  #spinner .face5 { -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(128px); }
+  #spinner .face6 { -webkit-transform: rotateX(-90deg) translateZ(64px);                }
+
+@-webkit-keyframes spincube {
+    from,to  { -webkit-transform: rotateX(-45deg) rotateY(0deg) rotateZ(-45deg); }
+    16%      { -webkit-transform: rotateY(-135deg);                           }
+    33%      { -webkit-transform: rotateY(-135deg) rotateZ(135deg);            }
+    50%      { -webkit-transform: rotateY(-225deg) rotateZ(225deg);           }
+    66%      { -webkit-transform: rotateY(45deg) rotateX(135deg);             }
+    83%      { -webkit-transform: rotateX(0deg);                            }
+  }
+
+  #spinner {
+    -webkit-animation-name: spincube;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 12s;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform-origin: 64px 64px 0;
+  }
