@@ -1,4 +1,9 @@
-/* pesticide v0.1.0 h @mrmrs MIT
+/*
+
+  STYLES
+
+  Add custom styles here.
+
 */
 
 .pesticide body { outline: 1px solid #2980b9 !important; }
@@ -100,3 +105,75 @@
 .pesticide span { outline: 1px solid #cc2643 !important; }
 .pesticide br { outline: 1px solid #db687d !important; }
 .pesticide wbr { outline: 1px solid #db175b !important; }
+
+
+.carbonad {
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 13px;
+  max-width: 20rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(0,0,0,.1);
+  }
+
+.carbonad a:link {
+  color: #444; }
+
+.carbonad a:visited {
+  color: #444; }
+
+.carbonad .carbon-wrap {
+  display: block;
+  overflow: hidden; }
+
+.carbonad .carbon-wrap .carbon-img {
+  float: left;
+  margin-right: 1rem; }
+
+.carbonad .carbon-wrap .carbon-text {
+  float: none;
+  overflow: hidden;
+  display: block;
+  font-size: 13px; }
+
+.carbonad .carbon-poweredby:link {
+  color: rgba(0, 0, 0, 0.75); }
+
+.carbonad .carbon-poweredby:visited {
+  color: rgba(0, 0, 0, 0.75); }
+
+/* CUBE */
+  #spinner .face {
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    text-align: center;
+    line-height: 128px;
+    font-size: 16px;
+  }
+
+  #spinner .face1 { -webkit-transform: translateZ(64px);                                }
+  #spinner .face2 { -webkit-transform: rotateY(90deg) translateZ(64px);                 }
+  #spinner .face3 { -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(64px);  }
+  #spinner .face4 { -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(64px); }
+  #spinner .face5 { -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(128px); }
+  #spinner .face6 { -webkit-transform: rotateX(-90deg) translateZ(64px);                }
+
+@-webkit-keyframes spincube {
+    from,to  { -webkit-transform: rotateX(-45deg) rotateY(0deg) rotateZ(-45deg); }
+    16%      { -webkit-transform: rotateY(-135deg);                           }
+    33%      { -webkit-transform: rotateY(-135deg) rotateZ(135deg);            }
+    50%      { -webkit-transform: rotateY(-225deg) rotateZ(225deg);           }
+    66%      { -webkit-transform: rotateY(45deg) rotateX(135deg);             }
+    83%      { -webkit-transform: rotateX(0deg);                            }
+  }
+
+  #spinner {
+    -webkit-animation-name: spincube;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 12s;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform-origin: 64px 64px 0;
+  }

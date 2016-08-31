@@ -1,0 +1,11 @@
+/*
+
+  DEBUG CHILDREN
+
+  Just add the debug class to any element to see outlines on its
+  children.
+
+*/
+
+.debug * { outline: 1px solid gold; }
+
