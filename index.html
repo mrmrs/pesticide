@@ -6,113 +6,33 @@
     <meta name="author" content="mrmrs">
     <meta name="description" content="A small tool to make debugging css a little bit easier.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://tachyons.io/css/tachyons.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
-    <style>
-
-.carbonad {
-  margin-right: auto;
-  margin-left: auto;
-  font-size: 13px;
-  max-width: 20rem;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  background: rgba(255, 255, 255, 0.1); }
-
-.carbonad a:link {
-  color: #eee; }
-
-.carbonad a:visited {
-  color: #eee; }
-
-.carbonad .carbon-wrap {
-  display: block;
-  overflow: hidden; }
-
-.carbonad .carbon-wrap .carbon-img {
-  float: left;
-  margin-right: 1rem; }
-
-.carbonad .carbon-wrap .carbon-text {
-  float: none;
-  overflow: hidden;
-  display: block;
-  font-size: 13px; }
-
-.carbonad .carbon-poweredby:link {
-  color: rgba(255, 255, 255, 0.75); }
-
-.carbonad .carbon-poweredby:visited {
-  color: rgba(255, 255, 255, 0.75); }
-    </style>
+    <link rel="stylesheet" href="css/tachyons.min.css" type="text/css">
   </head>
-  <body>
-      <h1>Pesticide</h1>
-      <h2>Faster CSS layout debugging</h2>
-      <a href="https://twitter.com/intent/tweet?text=Pesticide: Faster css layout debugging made easy.&url=http://pesticide.io&via=mrmrs%5f " target="_blank" class="mbs no-outline button twitter">
-        <svg class="geomicon no-outline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="#55acee" style="margin-right: .25em;">
-          <path d="M2 4 C6 8 10 12 15 11 A6 6 0 0 1 22 4 A6 6 0 0 1 26 6 A8 8 0 0 0 31 4 A8 8 0 0 1 28 8 A8 8 0 0 0 32 7 A8 8 0 0 1 28 11 A18 18 0 0 1 10 30 A18 18 0 0 1 0 27 A12 12 0 0 0 8 24 A8 8 0 0 1 3 20 A8 8 0 0 0 6 19.5 A8 8 0 0 1 0 12 A8 8 0 0 0 3 13 A8 8 0 0 1 2 4"/>
-        </svg>
-        Tweet
-      </a>
-      <div class="carbonad no-outline-children no-outline">
-        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1696&serve=CVYD42T&placement=mrmrsio" id="_carbonads_js"></script>
+  <body class="avenir bg-white black-70 pb5">
+<header class="tc pt5">
+<div class="stage dib pesticide  h4 w4">
+<article id="spinner">
+  <nav class="face face1"><header class="di pa3">1</header></nav>
+  <aside class="face face2"><span class="pa3">2</span></aside>
+  <main class="face face3"><p class="di pa3 ma0">3</p></main>
+  <address class="face face4"><i class="pa3 fs-normal">4</i></address>
+  <time class="face face5"><b class="fw4 pa3">5</b></time>
+  <article class="face face6"><footer class="pa3 di">6</footer></article>
+</article>
 </div>
-        The cascade part of cascading style sheets can be tricky.
-        Placing an outline on every element can help
-        you figure out what the fuck is going on.
-        <br>This little css module does exactly just that.
-        Nothing more, nothing less.
-Pesticide can be used a variety of ways
-<a href="https://github.com/mrmrs/pesticide/zipball/master">&nbsp; Download &nbsp; </a>
-<a class="no-outline button mbs" href="https://chrome.google.com/webstore/detail/pesticide-for-chrome/bblbgcheenepgnnajgfpiicnbbdmmooh?hl=en-US">&nbsp; Install on Chrome &nbsp; </a>
-
-Alternatively you can add the uncompressed or compressed css to your page for
-instant debugging.
-
-<code class="no-outline" style="font-size: 14px;white-space:nowrap;">
-&lt;link href="https://s3-us-west-2.amazonaws.com/pesticide/1.2.0/pesticide.css"&gt;</code>
-<code class="no-outline purple" style="font-size: 14px;white-space:nowrap;">
-&lt;link href="https://s3-us-west-2.amazonaws.com/pesticide/1.2.0/pesticide.min.css"&gt;</code>
-
-      <h3>Using the Chrome and Safari Extensions</h3>
-      <p>
-        Toggle outlines on any website with this handy <a href="https://chrome.google.com/webstore/detail/pesticide-for-chrome/bblbgcheenepgnnajgfpiicnbbdmmooh?hl=en-US" title="Pesticide for Chrome"> chrome extension</a>
-Or this handy
-
-The only drawback is the outlines don't persist on page refresh. If that is your desire - it is recommended that you install it locally as described below.
-      </p>
-<img src="img/demo2.gif" class="no-outline mbx" style="width: 100%;display: block;"  >
-
-      <h3 class="no-outline mtm">Local Development</h3>
-      <p class="no-outline mbn">
-        Download <a href="https://raw.github.com/mrmrs/pesticide/master/css/pesticide.css" class="link purple">&nbsp;the css file here&nbsp;</a>  &nbsp;and include it in your html document like so
-      </p>
-<pre class="no-outline" style="overflow-x:auto;">
-<code class="no-outline purple f6" style="white-space:nowrap;">
-&lt;link rel="stylesheet" href="css/pesticide.css"&gt;
-</code>
-</pre>
-
-    Adding a file to the head of your html document can kind of be a pain if
-you are toggling it on and off.
-  You can add pesticide as a sass partial and it will only render out if you
-set
-<pre class="no-outline"><code class="no-outline purple lh-copy">
-$pesticide-debug: true;
-@import "pesticide";
-  </code></pre>
-  <p>
-<footer>
-
-  <a href="https://twitter.com/intent/tweet?text=Pesticide: Faster css layout debugging made easy.&url=http://pesticide.io&via=mrmrs%5f " target="_blank" class="">
-    <svg class="geomicon no-outline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="#30BBDB">
-      <path d="M2 4 C6 8 10 12 15 11 A6 6 0 0 1 22 4 A6 6 0 0 1 26 6 A8 8 0 0 0 31 4 A8 8 0 0 1 28 8 A8 8 0 0 0 32 7 A8 8 0 0 1 28 11 A18 18 0 0 1 10 30 A18 18 0 0 1 0 27 A12 12 0 0 0 8 24 A8 8 0 0 1 3 20 A8 8 0 0 0 6 19.5 A8 8 0 0 1 0 12 A8 8 0 0 0 3 13 A8 8 0 0 1 2 4"/>
-    </svg>
-    Tweet this
-
-  </a>
-
-</footer>
+<h1 class="mv0 pb3 f5 f1-m f-subheadline-l ttu tracked fw6">Pesticide</h1>
+    </header>
+    <main class="tc">
+      <h2 class="mv0 f5 fw4 measure center lh-copy">A chrome plugin for quickly debugging css layout issues by toggling different colored outlines on every element.</h2>
+      <h3 class="fw6 tc f6 ttu tracked mt4">Used by more than 20,000 people</h3>
+      <a href="https://twitter.com/intent/tweet?text=Pesticide: Faster css layout debugging made easy.&url=http://pesticide.io&via=mrmrs%5f " target="_blank" class="link dib mt4 dim ba bw2 blue pv2 ph3 twitter">
+        Tweet This
+      </a>
+<a class="link dib mt4 dim ba bw2 purple pv2 ph3" href="https://chrome.google.com/webstore/detail/pesticide-for-chrome/bblbgcheenepgnnajgfpiicnbbdmmooh?hl=en-US">&nbsp; Install on Chrome &nbsp; </a>
+      <div class="carbonad mt5 tl link">
+        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1696&serve=CVYD42T&placement=mrmrsio" id="_carbonads_js"></script>
+    </div>
+</header>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -124,6 +44,7 @@ ga('send', 'pageview');
 
 </script>
 
+</main>
   </body>
 </html>
 
