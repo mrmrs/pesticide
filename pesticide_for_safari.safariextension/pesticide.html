@@ -1,0 +1,5 @@
+<script>
+safari.application.addEventListener('command', function (evt) {
+    safari.application.activeBrowserWindow.activeTab.page.dispatchMessage(evt.command);
+}, false);
+</script>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+   <key>Extension Updates</key>
+   <array>
+     <dict>
+      <key>CFBundleIdentifier</key>
+      <string>com.paulmolluzzo.safari.pesticideforsafari</string>
+      <key>Developer Identifier</key>
+      <string>62EHEH25U5</string>
+      <key>CFBundleVersion</key>
+      <string>1</string>
+      <key>CFBundleShortVersionString</key>
+      <string>1.0</string>
+      <key>URL</key>
+      <string>https://github.com/paulmolluzzo/pesticide/raw/safari_extension/pesticide_for_safari.safariextz</string>
+     </dict>
+   </array>
+</dict>
+</plist>
