@@ -5,11 +5,11 @@ function init() {
 
 // updates the info banner at the bottom of the page
 function updateBanner(event) {
-  var id = event.target.id.toString() || '';
-  var classList = event.target.classList.toString() || '';
-  var node = event.target.nodeName.toLowerCase() || '';
+  var id = (event.target.id && event.target.id.toString()) || '';
+  var classList = (event.target.classList && event.target.classList.toString()) || '';
+  var node = (event.target.nodeName && event.target.nodeName.toLowerCase()) || '';
 
-  if (!!!resultBanner)
+  if (!resultBanner)
     return false;
 
   // combine the node name, classes, and id into a string in the banner
