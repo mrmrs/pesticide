@@ -100,7 +100,7 @@ If you make changes to the extension within this repo and want it pushed up to C
 
 # Firefox Add-on
 
-Pesticide is also available as a [Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/pesticide/)
+Pesticide is also available as a [Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/pesticide-for-firefox//)
 
 # Author
 
