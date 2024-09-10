@@ -1,45 +1,35 @@
-(function(window, document){
-
-  'use strict';
-
-  // inject the pesticide CSS and JS
-  function toggleAssets(tab) {
-    var injector = '';
-
-    // logic test if the injected assets exists
-    injector += 'if (document.getElementById("pesticideCSS") && document.getElementById("pesticideJS") ) {';
-
-    //if they exist, remove them
-    injector += 'document.getElementsByTagName("head")[0].removeChild(document.getElementById("pesticideCSS"));';
-    injector += 'document.getElementsByTagName("head")[0].removeChild(document.getElementById("pesticideJS"));';
-    injector += 'document.getElementsByTagName("body")[0].removeChild(document.getElementById("pesticide-for-chrome-result"));';
-
-    //if they don't exist, inject them
-    injector += '} else {';
-
-    injector += 'pesticideCSS = document.createElement("link");';
-    injector += 'pesticideCSS.rel = "stylesheet";';
-    injector += 'pesticideCSS.type = "text/css";';
-    injector += 'pesticideCSS.href = chrome.extension.getURL("/pesticide.min.css");';
-    injector += 'pesticideCSS.id = "pesticideCSS";';
-    injector += 'document.getElementsByTagName("head")[0].appendChild(pesticideCSS);';
-    injector += 'pesticideJS = document.createElement("script");';
-    injector += 'pesticideJS.type = "text/javascript";';
-    injector += 'pesticideJS.src = chrome.extension.getURL("/pesticide.js");';
-    injector += 'pesticideJS.id = "pesticideJS";';
-    injector += 'document.getElementsByTagName("head")[0].appendChild(pesticideJS);';
-    injector += 'pesticideResult = document.createElement("div"),';
-    injector += 'pesticideResult.id = "pesticide-for-chrome-result",';
-    injector += 'document.getElementsByTagName("body")[0].appendChild(pesticideResult)';
-
-    //close logic test
-    injector += '}';
-
-    chrome.tabs.executeScript({code: injector});
-  }
-
-  chrome.browserAction.onClicked.addListener(function(tab){
-    toggleAssets(tab);
+chrome.action.onClicked.addListener((tab) => {
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    function: toggleAssets
   });
+});
 
-}(window, document));
+function toggleAssets() {
+  // Inject the pesticide CSS and JS or remove them if already present
+
+  if (document.getElementById("pesticideCSS") && document.getElementById("pesticideJS")) {
+    // If they exist, remove them
+    document.getElementsByTagName("head")[0].removeChild(document.getElementById("pesticideCSS"));
+    document.getElementsByTagName("head")[0].removeChild(document.getElementById("pesticideJS"));
+    document.getElementsByTagName("body")[0].removeChild(document.getElementById("pesticide-for-chrome-result"));
+  } else {
+    // If they don't exist, inject them
+    const pesticideCSS = document.createElement("link");
+    pesticideCSS.rel = "stylesheet";
+    pesticideCSS.type = "text/css";
+    pesticideCSS.href = chrome.runtime.getURL("/pesticide.min.css");
+    pesticideCSS.id = "pesticideCSS";
+    document.getElementsByTagName("head")[0].appendChild(pesticideCSS);
+
+    const pesticideJS = document.createElement("script");
+    pesticideJS.type = "text/javascript";
+    pesticideJS.src = chrome.runtime.getURL("/pesticide.js");
+    pesticideJS.id = "pesticideJS";
+    document.getElementsByTagName("head")[0].appendChild(pesticideJS);
+
+    const pesticideResult = document.createElement("div");
+    pesticideResult.id = "pesticide-for-chrome-result";
+    document.getElementsByTagName("body")[0].appendChild(pesticideResult);
+  }
+}
