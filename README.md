@@ -94,13 +94,13 @@ COLOR_TABLE=path/to/custom/table.json gulp generate
 
 # Chrome Extension
 
-The source for the Pesticide Chrome extension is included beginning from v0.2. The extension is [available in the Chrome Web Store here](https://chrome.google.com/webstore/detail/bblbgcheenepgnnajgfpiicnbbdmmooh).
+The source for the Pesticide Chrome extension is included beginning from v0.2. The extension is [available in the Chrome Web Store here](https://chromewebstore.google.com/detail/pesticide-for-chrome/bakpbgckdnepkmkeaiomhmfcnejndkbi).
 
 If you make changes to the extension within this repo and want it pushed up to Chrome, report an issue and mention @paulmolluzzo to make sure I get an email about it.
 
 # Firefox Add-on
 
-Pesticide is also available as a [Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/pesticide/)
+Pesticide is also available as a [Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/pesticide-for-firefox/)
 
 # Author
 
